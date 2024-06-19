@@ -1,12 +1,8 @@
 github_users:
-  - torvalds
-  - alshedivat
+  - JunyiZhu-AI
 
 github_repos:
-  - alshedivat/al-folio
-  - twbs/bootstrap
-  - jekyll/jekyll
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - jpswalsh/academicons
-  - mathjax/MathJax
+  - JunyiZhu-AI/R-GAP
+  - JunyiZhu-AI/confidence_aware_PFL
+  - JunyiZhu-AI/surrogate_model_extension
+  - imagination-research/LCSC
