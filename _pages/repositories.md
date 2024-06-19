@@ -7,7 +7,6 @@ nav: true
 nav_order: 4
 ---
 
-
 ## GitHub Repositories
 
 {% if site.data.repositories.github_repos %}
