@@ -20,6 +20,6 @@ I'm about to complete my PhD at KU Leuven in the Processing Speech and Images Ce
 
 Before my PhD, I earned my Master's degree from the Karlsruhe Institute of Technology in Germany, specializing in information technologies and vehicle engineering. During my Master's program, I worked on several research projects addressing autonomous driving problems using AI at the Institute of Measurement and Control Systems and the Research Center for Information Technology in Karlsruhe.
 
-I'm currently on the job market and welcome anyone interested to reach out!💪
+I'm currently on the job market 💪 and welcome anyone interested to reach out!
 
-我目前正在找工作，有任何机会欢迎联系！💪
+我目前正在找工作💪，有任何机会欢迎联系！
