@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-I visited <a href='https://nicsefc.ee.tsinghua.edu.cn'>NICS-EFC lab</a> at Tsinghua University.
+I'm visiting <a href='https://nicsefc.ee.tsinghua.edu.cn'>NICS-EFC lab</a> at Tsinghua University for two months.
