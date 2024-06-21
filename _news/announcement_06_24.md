@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-My dissertation is complete, and I'm looking forward to the defense!
+My dissertation is complete, and I'm looking forward to the defence!
