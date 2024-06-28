@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='https://www.kuleuven.be/wieiswie/en/person/00137607'>PhD Student at KU Leuven, Belgium</a>. Major in artificial intelligence.
+subtitle: <a href='https://www.kuleuven.be/wieiswie/en/person/00137607'>Research associate at KU Leuven, Belgium</a>. Major in artificial intelligence.
 
 profile:
   align: right
