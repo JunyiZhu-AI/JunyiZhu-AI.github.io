@@ -20,4 +20,4 @@ I'm currently working at SRUK with a focus on advanced AI research. I've done my
 
 Before my PhD, I earned my Master's degree from the Karlsruhe Institute of Technology in Germany, specializing in information technologies and vehicle engineering. During my Master's program, I worked on several research projects addressing autonomous driving problems using AI at the Institute of Measurement and Control Systems and the Research Center for Information Technology in Karlsruhe.
 
-<em>If you are interested in research collaboration, feel free to reach out!<em>😊
+<strong><em>If you are interested in research collaboration, feel free to reach out!<em><strong>😊
