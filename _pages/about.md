@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Research Engineer at <a href='https://research.samsung.com/sruk'>Samsung Electronics R&D Institute UK (SRUK)</a>. Focusing on advanced AI research..
+subtitle: Senior researcher at <a href='https://research.samsung.com/sruk'>Samsung Electronics R&D Institute UK (SRUK)</a>. Focusing on advanced AI research..
 
 profile:
   align: right
