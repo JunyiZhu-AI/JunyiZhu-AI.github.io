@@ -6,7 +6,7 @@ subtitle: Senior researcher at <a href='https://research.samsung.com/sruk'>Samsu
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: job_photo_selected.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
     <p> </p>
