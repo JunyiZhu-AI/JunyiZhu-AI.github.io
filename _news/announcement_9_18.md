@@ -6,4 +6,4 @@ related_posts: false
 ---
 
 
-Our paper "Latent Zoning Network: A Unified Principle for Generative Modeling, Representation Learning, and Classification" has been accepted at NeurIPS 2025. A link to the paper will be available soon!
+Our paper <a href='https://arxiv.org/abs/2509.15591'>Latent Zoning Network: A Unified Principle for Generative Modeling, Representation Learning, and Classification</a> has been accepted at NeurIPS 2025.
