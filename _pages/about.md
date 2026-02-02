@@ -22,8 +22,8 @@ Currently, I handle post-training efforts for <a href='https://copilot.microsoft
 
 Previously, I drove innovation at <a href='https://research.samsung.com/sruk'>Samsung Research</a>, prototyping advanced AI features for the next generation of smartphones, spanning everything from core productivity to digital entertainment.
 
-I've done my PhD studies at KU Leuven in Belgium, under the guidance of <a href='https://homes.esat.kuleuven.be/~mblaschk/'>Prof. Matthew Blaschko</a>. During my PhD, I have explored and contribued to many domains in AI, including image generation models, large language models, distributed learning and privacy-preserving machine learning.
+I completed my PhD studies at KU Leuven in Belgium, under the guidance of <a href='https://homes.esat.kuleuven.be/~mblaschk/'>Prof. Matthew Blaschko</a>. During my PhD, I have explored and contributed to many domains in AI, including image generation models, large language models, distributed learning and privacy-preserving machine learning.
 
 Before my PhD, I earned my Master's degree from the <a href='https://www.kit.edu/english/'>Karlsruhe Institute of Technology</a> in Germany, specializing in autonomous driving. During my Master's program, I worked on several research projects using AI to solve control and perception tasks of autonomous driving at <a href='https://www.mrt.kit.edu/english/index.php'>Institute of Measurement and Control Systems</a> and <a href='https://www.fzi.de/en/'>Research Center for Information Technology</a> in Karlsruhe.
 
-<strong><em>If you are interested in research collaboration, feel free to reach out!<em><strong>😊
+<strong><em>If you are interested in research collaboration, feel free to reach out!</em></strong>😊
