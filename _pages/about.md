@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Senior researcher at <a href='https://research.samsung.com/sruk'>Samsung Electronics R&D Institute UK (SRUK)</a>.
+subtitle: Senior Applied Scientist at <a href="https://www.microsoft.com/en-gb/about/offices/paddington/">Microsoft UK</a>.
 
 profile:
   align: right
