@@ -18,11 +18,11 @@ social: true # includes social icons at the bottom of the page
 
 I focus on building AI that actually understands people, whether that’s making their workday easier or their personal life more creative.
 
-Currently, I handle post-training efforts for <a href="https://copilot.microsoft.com">Microsoft 365 Copilot</a>, where I focus on building models that possess deep contextual awareness of users, their roles, and their companies.
+Currently, I drive post-training efforts for <a href="https://copilot.microsoft.com">Microsoft 365 Copilot</a>, where I focus on building models that possess deep contextual awareness of workplace users, their roles, and their organizations.
 
 Previously, I drove innovation at <a href="https://research.samsung.com/sruk">Samsung Research</a>, prototyping advanced AI features for the next generation of smartphones, spanning everything from core productivity to digital entertainment.
 
-I completed my PhD studies at KU Leuven in Belgium, under the guidance of <a href="https://homes.esat.kuleuven.be/~mblaschk/">Prof. Matthew Blaschko</a>. During my PhD, I have explored and contributed to many domains in AI, including image generation models, large language models, distributed learning and privacy-preserving machine learning.
+I completed my PhD studies at <a href="https://www.kuleuven.be/kuleuven/">KU Leuven</a> in Belgium, under the guidance of <a href="https://homes.esat.kuleuven.be/~mblaschk/">Prof. Matthew Blaschko</a>. During my PhD, I have explored and contributed to many domains in AI, including image generation models, large language models, distributed learning and privacy-preserving machine learning.
 
 Before my PhD, I earned my Master's degree from the <a href="https://www.kit.edu/english/">Karlsruhe Institute of Technology</a> in Germany, specializing in autonomous driving. During my Master's program, I worked on several research projects using AI to solve control and perception tasks of autonomous driving at <a href="https://www.mrt.kit.edu/english/index.php">Institute of Measurement and Control Systems</a> and <a href="https://www.fzi.de/en/">Research Center for Information Technology</a> in Karlsruhe.
 
