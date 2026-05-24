@@ -16,7 +16,7 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-I focus on building AI that actually understands people, whether that’s making their workday easier or their personal life more creative.
+I focus on building AI that makes people's workdays easier or their personal lives more creative.
 
 Currently, I drive post-training efforts for <a href="https://copilot.microsoft.com">Microsoft 365 Copilot</a>, where I focus on building models that possess deep contextual awareness of workplace users, their roles, and their organizations.
 
