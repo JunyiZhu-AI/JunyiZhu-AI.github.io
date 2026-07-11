@@ -155,6 +155,51 @@ ${emailLink('accent')}
 
 const FOOTER = '';
 
+// Decorative schematic of what I work on. Labels stay at the level of Microsoft's
+// public communication (agents reason & act on workplace context — people, content,
+// goals — via REST/A2A/MCP; enterprise-grade tools & apps). Meaning is carried by the
+// crawlable figcaption; the SVG itself is decorative (aria-hidden), animated in pure CSS.
+const WORK_SCHEMATIC = `<h2 class="sec">What I work on</h2>
+<figure class="work-fig">
+<div class="work-fig-scroll">
+<svg viewBox="0 0 760 186" aria-hidden="true" focusable="false">
+<defs>
+<marker id="ws-ah" viewBox="0 0 8 8" refX="6.5" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 .5 L7.5 4 L0 7.5 Z" fill="#9a9a9a"/></marker>
+<marker id="ws-ah-a" viewBox="0 0 8 8" refX="6.5" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 .5 L7.5 4 L0 7.5 Z" fill="var(--accent)"/></marker>
+</defs>
+<text class="ws-h" x="650" y="20" text-anchor="middle">Microsoft ecosystem</text>
+<rect class="ws-node" x="20" y="82" width="136" height="56" rx="10"/>
+<text class="ws-node-t" x="88" y="114" text-anchor="middle">Enterprise user</text>
+<rect class="ws-agent" x="300" y="78" width="158" height="64" rx="10"/>
+<text class="ws-agent-t" x="379" y="102" text-anchor="middle">Agent</text>
+<text class="ws-agent-s" x="379" y="122" text-anchor="middle">reasons &amp; acts at work</text>
+<path class="ws-loop" d="M 322 78 C 322 32 436 32 436 78" marker-end="url(#ws-ah-a)"/>
+<circle class="ws-dot" r="3"/>
+<text class="ws-loop-t" x="379" y="58" text-anchor="middle">post-training</text>
+<path class="ws-ret flow" d="M 96 82 C 124 34 230 22 314 46" marker-end="url(#ws-ah-a)"/>
+<text class="ws-ret-t" x="196" y="24" text-anchor="middle">user feedback</text>
+<g class="ws-line">
+<path class="flow" d="M 156 96 L 296 96" marker-end="url(#ws-ah)"/>
+<path class="flow" d="M 296 124 L 160 124" marker-end="url(#ws-ah)"/>
+<path class="flow" d="M 597 96 L 462 96" marker-end="url(#ws-ah)"/>
+<path class="flow" d="M 462 124 L 597 124" marker-end="url(#ws-ah)"/>
+</g>
+<text class="ws-act-t" x="226" y="86" text-anchor="middle">query</text>
+<text class="ws-act-t" x="226" y="140" text-anchor="middle">answers · deliverables</text>
+<text class="ws-ctx-t" x="528" y="76" text-anchor="middle">workplace context</text>
+<text class="ws-ctx-s" x="528" y="88" text-anchor="middle">people · content · goals</text>
+<text class="ws-proto" x="528" y="140" text-anchor="middle">REST · A2A · MCP</text>
+<g class="ws-tile">
+<rect x="603" y="63" width="26" height="26" rx="7"/><rect x="637" y="63" width="26" height="26" rx="7" class="on"/><rect x="671" y="63" width="26" height="26" rx="7"/>
+<rect x="603" y="97" width="26" height="26" rx="7"/><rect x="637" y="97" width="26" height="26" rx="7"/><rect x="671" y="97" width="26" height="26" rx="7" class="on"/>
+<rect x="603" y="131" width="26" height="26" rx="7" class="on"/><rect x="637" y="131" width="26" height="26" rx="7"/><rect x="671" y="131" width="26" height="26" rx="7"/>
+</g>
+<text class="ws-sub" x="650" y="176" text-anchor="middle">tools &amp; apps · enterprise-grade</text>
+</svg>
+</div>
+<figcaption>Enterprise users ask, and the agent answers by grounding on workplace context (people, content, goals) and acting across Microsoft&rsquo;s tools and apps. Post-training, guided by user feedback, is my focus.</figcaption>
+</figure>`;
+
 function venueLine(f) {
   return `<span class="venue">${esc(f.abbr || '')} ${esc(f.year)}</span>${f.note ? `<span class="pub-note">${esc(f.note)}</span>` : ''}`;
 }
@@ -221,6 +266,7 @@ ${emailLink('accent')}
 <div class="bio">
 ${bio.trim()}
 </div>
+${WORK_SCHEMATIC}
 <h2 class="sec">News</h2>
 <div class="news">
 ${news.map((n) => `<div class="news-item"><span class="news-date">${fmtDate(n.date)}</span><span>${n.text}</span></div>`).join('\n')}
