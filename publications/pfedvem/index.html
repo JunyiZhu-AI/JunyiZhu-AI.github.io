@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Confidence-aware Personalized Federated Learning via Variational Expectation Maximization (CVPR 2023) — Junyi Zhu</title>
+<meta name="description" content="pFedVEM treats the shared model in personalized federated learning as a latent variable in a hierarchical Bayesian model, optimized with variational expectation maximization.">
+<link rel="canonical" href="https://junyizhu-ai.github.io/publications/pfedvem/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23141414'/%3E%3Ctext x='32' y='43' font-family='Helvetica,Arial,sans-serif' font-size='28' font-weight='700' fill='%23fff' text-anchor='middle'%3EJZ%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Confidence-aware Personalized Federated Learning via Variational Expectation Maximization (CVPR 2023) — Junyi Zhu">
+<meta property="og:description" content="pFedVEM treats the shared model in personalized federated learning as a latent variable in a hierarchical Bayesian model, optimized with variational expectation maximization.">
+<meta property="og:url" content="https://junyizhu-ai.github.io/publications/pfedvem/">
+<meta property="og:image" content="https://junyizhu-ai.github.io/assets/img/pub/pfedvem.jpg">
+<meta name="twitter:card" content="summary">
+<meta name="citation_title" content="Confidence-aware Personalized Federated Learning via Variational Expectation Maximization">
+<meta name="citation_author" content="Junyi Zhu">
+<meta name="citation_author" content="Xingchen Ma">
+<meta name="citation_author" content="Matthew B. Blaschko">
+<meta name="citation_publication_date" content="2023">
+<meta name="citation_arxiv_id" content="2305.12557">
+<meta name="citation_pdf_url" content="https://arxiv.org/pdf/2305.12557">
+<meta name="citation_doi" content="10.48550/arXiv.2305.12557">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/main.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ScholarlyArticle","headline":"Confidence-aware Personalized Federated Learning via Variational Expectation Maximization","name":"Confidence-aware Personalized Federated Learning via Variational Expectation Maximization","author":[{"@type":"Person","name":"Junyi Zhu","url":"https://junyizhu-ai.github.io","sameAs":["https://scholar.google.com/citations?user=3LeC4cMAAAAJ","https://www.linkedin.com/in/junyi-zhu-ai/"]},{"@type":"Person","name":"Xingchen Ma"},{"@type":"Person","name":"Matthew B. Blaschko"}],"datePublished":"2023","publisher":{"@type":"Organization","name":"Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition"},"abstract":"Federated Learning (FL) is a distributed learning scheme to train a shared model across clients. One common and fundamental challenge in FL is that the sets of data across clients could be non-identically distributed and have different sizes. Personalized Federated Learning (PFL) attempts to solve this challenge via locally adapted models. In this work, we present a novel framework for PFL based on hierarchical Bayesian modeling and variational inference. A global model is introduced as a latent variable to augment the joint distribution of clients' parameters and capture the common trends of different clients, optimization is derived based on the principle of maximizing the marginal likelihood and conducted using variational expectation maximization. Our algorithm gives rise to a closed-form estimation of a confidence value which comprises the uncertainty of clients' parameters and local model deviations from the global model. The confidence value is used to weigh clients' parameters in the aggregation stage and adjust the regularization effect of the global model. We evaluate our method through extensive empirical studies on multiple datasets. Experimental results show that our approach obtains competitive results under mild heterogeneous circumstances while significantly outperforming state-of-the-art PFL frameworks in highly heterogeneous settings.","url":"https://junyizhu-ai.github.io/publications/pfedvem/","mainEntityOfPage":"https://junyizhu-ai.github.io/publications/pfedvem/","sameAs":["https://arxiv.org/abs/2305.12557","https://openaccess.thecvf.com/content/CVPR2023/html/Zhu_Confidence-Aware_Personalized_Federated_Learning_via_Variational_Expectation_Maximization_CVPR_2023_paper.html","https://doi.org/10.48550/arXiv.2305.12557"],"identifier":[{"@type":"PropertyValue","propertyID":"arXiv","value":"2305.12557"},{"@type":"PropertyValue","propertyID":"DOI","value":"10.48550/arXiv.2305.12557"}],"image":"https://junyizhu-ai.github.io/assets/img/pub/pfedvem.jpg"}</script>
+</head>
+<body>
+<header class="top"><div class="top-inner">
+<a class="top-name" href="../../">Junyi Zhu</a>
+<nav class="top-nav">
+<a href="../../publications/" style="color:var(--ink);font-weight:700">Publications</a>
+<a href="https://scholar.google.com/citations?user=3LeC4cMAAAAJ">Google Scholar</a>
+<a href="#contact" class="js-email accent" data-u="junyizhu.ai" data-d="gmail.com" rel="nofollow">Email</a>
+</nav>
+</div></header>
+<main class="page">
+<a class="back-link" href="../">← All publications</a>
+<article>
+<h1 class="paper-title">Confidence-aware Personalized Federated Learning via Variational Expectation Maximization</h1>
+<p class="paper-authors"><strong>Junyi Zhu*</strong>, Xingchen Ma*, Matthew B. Blaschko</p>
+<p class="paper-venue"><span class="venue">CVPR 2023</span><span class="pub-note">* = Co-first authors</span><span style="margin-left:8px">Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition</span></p>
+<div class="paper-links"><a class="btn" href="https://arxiv.org/abs/2305.12557">arXiv</a>
+<a class="btn" href="https://openaccess.thecvf.com/content/CVPR2023/html/Zhu_Confidence-Aware_Personalized_Federated_Learning_via_Variational_Expectation_Maximization_CVPR_2023_paper.html">Publisher page</a>
+<a class="btn" href="https://github.com/JunyiZhu-AI/confidence_aware_PFL">Code</a></div>
+<img class="paper-fig" src="../../assets/img/pub/fig/pfedvem.jpg" alt="Key figure from the paper" loading="lazy">
+<h2 class="paper-h">In brief</h2>
+<p class="paper-summary">pFedVEM treats the shared model in personalized federated learning as a latent variable in a hierarchical Bayesian model, optimized with variational expectation maximization. The math yields a closed-form per-client confidence value — the inverse of parameter uncertainty plus deviation from the global model — that replaces ad-hoc data-size weighting during aggregation and adapts each client's regularization strength, at the cost of one extra scalar per message.</p>
+<h2 class="paper-h">Key takeaways</h2>
+<ul class="paper-takeaways">
+<li>A principled fix for an inconsistency in PFL: theory usually analyzes unweighted averages while practice weights by data size — here the aggregation weights fall out of the model itself as closed-form confidence values (inverse of variational uncertainty plus model deviation).</li>
+<li>Confidence-weighting beats data-size weighting in two concrete ways: duplicated or highly correlated local data no longer inflates a client's influence, and outlier clients far from the population distribution are automatically down-weighted.</li>
+<li>The same confidence value rescales each client's KL regularization: data-rich clients absorb more of the global model, while strongly deviating clients get more freedom to personalize.</li>
+<li>Evaluated beyond the usual label-distribution skew: also under label concept drift (built from CIFAR100/SUN397 superclasses) — a harder, rarely studied heterogeneity — plus data-quantity disparity.</li>
+<li>Competitive under mild heterogeneity and significantly ahead of state-of-the-art PFL frameworks in highly heterogeneous settings, with communication cost essentially unchanged (one extra scalar).</li>
+</ul>
+<h2 class="paper-h">Abstract</h2>
+<p class="paper-abstract">Federated Learning (FL) is a distributed learning scheme to train a shared model across clients. One common and fundamental challenge in FL is that the sets of data across clients could be non-identically distributed and have different sizes. Personalized Federated Learning (PFL) attempts to solve this challenge via locally adapted models. In this work, we present a novel framework for PFL based on hierarchical Bayesian modeling and variational inference. A global model is introduced as a latent variable to augment the joint distribution of clients' parameters and capture the common trends of different clients, optimization is derived based on the principle of maximizing the marginal likelihood and conducted using variational expectation maximization. Our algorithm gives rise to a closed-form estimation of a confidence value which comprises the uncertainty of clients' parameters and local model deviations from the global model. The confidence value is used to weigh clients' parameters in the aggregation stage and adjust the regularization effect of the global model. We evaluate our method through extensive empirical studies on multiple datasets. Experimental results show that our approach obtains competitive results under mild heterogeneous circumstances while significantly outperforming state-of-the-art PFL frameworks in highly heterogeneous settings.</p>
+<h2 class="paper-h">BibTeX</h2>
+<pre class="bibtex">@inproceedings{zhu_pfedvem,
+  title     = {Confidence-aware Personalized Federated Learning via Variational Expectation Maximization},
+  author    = {Zhu, Junyi and Ma, Xingchen and Blaschko, Matthew B.},
+  year      = {2023},
+  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  url       = {https://arxiv.org/abs/2305.12557},
+}</pre>
+</article>
+</main>
+
+<script>document.querySelectorAll('.js-email').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();location.href='mailto:'+a.dataset.u+'@'+a.dataset.d;});});</script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>R-GAP: Recursive Gradient Attack on Privacy (ICLR 2021) — Junyi Zhu</title>
+<meta name="description" content="R-GAP established a third family of gradient privacy attacks: a closed-form, layer-by-layer recursion that reconstructs training data from gradients — the first such attack to work on both convolutional and fully connected networks, with or without bias terms.">
+<link rel="canonical" href="https://junyizhu-ai.github.io/publications/r-gap/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23141414'/%3E%3Ctext x='32' y='43' font-family='Helvetica,Arial,sans-serif' font-size='28' font-weight='700' fill='%23fff' text-anchor='middle'%3EJZ%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="article">
+<meta property="og:title" content="R-GAP: Recursive Gradient Attack on Privacy (ICLR 2021) — Junyi Zhu">
+<meta property="og:description" content="R-GAP established a third family of gradient privacy attacks: a closed-form, layer-by-layer recursion that reconstructs training data from gradients — the first such attack to work on both convolutional and fully connected networks, with or without bias terms.">
+<meta property="og:url" content="https://junyizhu-ai.github.io/publications/r-gap/">
+<meta property="og:image" content="https://junyizhu-ai.github.io/assets/img/pub/rgap.jpg">
+<meta name="twitter:card" content="summary">
+<meta name="citation_title" content="R-GAP: Recursive Gradient Attack on Privacy">
+<meta name="citation_author" content="Junyi Zhu">
+<meta name="citation_author" content="Matthew B. Blaschko">
+<meta name="citation_publication_date" content="2021">
+<meta name="citation_arxiv_id" content="2010.07733">
+<meta name="citation_pdf_url" content="https://arxiv.org/pdf/2010.07733">
+<meta name="citation_doi" content="10.48550/arXiv.2010.07733">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/main.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ScholarlyArticle","headline":"R-GAP: Recursive Gradient Attack on Privacy","name":"R-GAP: Recursive Gradient Attack on Privacy","author":[{"@type":"Person","name":"Junyi Zhu","url":"https://junyizhu-ai.github.io","sameAs":["https://scholar.google.com/citations?user=3LeC4cMAAAAJ","https://www.linkedin.com/in/junyi-zhu-ai/"]},{"@type":"Person","name":"Matthew B. Blaschko"}],"datePublished":"2021","publisher":{"@type":"Organization","name":"International Conference on Learning Representations"},"abstract":"Federated learning frameworks have been regarded as a promising approach to break the dilemma between demands on privacy and the promise of learning from large collections of distributed data. Many such frameworks only ask collaborators to share their local update of a common model, i.e. gradients with respect to locally stored data, instead of exposing their raw data to other collaborators. However, recent optimization-based gradient attacks show that raw data can often be accurately recovered from gradients. It has been shown that minimizing the Euclidean distance between true gradients and those calculated from estimated data is often effective in fully recovering private data. However, there is a fundamental lack of theoretical understanding of how and when gradients can lead to unique recovery of original data. Our research fills this gap by providing a closed-form recursive procedure to recover data from gradients in deep neural networks. We name it Recursive Gradient Attack on Privacy (R-GAP). Experimental results demonstrate that R-GAP works as well as or even better than optimization-based approaches at a fraction of the computation under certain conditions. Additionally, we propose a Rank Analysis method, which can be used to estimate the risk of gradient attacks inherent in certain network architectures, regardless of whether an optimization-based or closed-form-recursive attack is used. Experimental results demonstrate the utility of the rank analysis towards improving the network's security.","url":"https://junyizhu-ai.github.io/publications/r-gap/","mainEntityOfPage":"https://junyizhu-ai.github.io/publications/r-gap/","sameAs":["https://arxiv.org/abs/2010.07733","https://openreview.net/forum?id=RSU17UoKfJF","https://doi.org/10.48550/arXiv.2010.07733"],"identifier":[{"@type":"PropertyValue","propertyID":"arXiv","value":"2010.07733"},{"@type":"PropertyValue","propertyID":"DOI","value":"10.48550/arXiv.2010.07733"}],"image":"https://junyizhu-ai.github.io/assets/img/pub/rgap.jpg"}</script>
+</head>
+<body>
+<header class="top"><div class="top-inner">
+<a class="top-name" href="../../">Junyi Zhu</a>
+<nav class="top-nav">
+<a href="../../publications/" style="color:var(--ink);font-weight:700">Publications</a>
+<a href="https://scholar.google.com/citations?user=3LeC4cMAAAAJ">Google Scholar</a>
+<a href="#contact" class="js-email accent" data-u="junyizhu.ai" data-d="gmail.com" rel="nofollow">Email</a>
+</nav>
+</div></header>
+<main class="page">
+<a class="back-link" href="../">← All publications</a>
+<article>
+<h1 class="paper-title">R-GAP: Recursive Gradient Attack on Privacy</h1>
+<p class="paper-authors"><strong>Junyi Zhu</strong>, Matthew B. Blaschko</p>
+<p class="paper-venue"><span class="venue">ICLR 2021</span><span style="margin-left:8px">International Conference on Learning Representations</span></p>
+<div class="paper-links"><a class="btn" href="https://arxiv.org/abs/2010.07733">arXiv</a>
+<a class="btn" href="https://openreview.net/forum?id=RSU17UoKfJF">Publisher page</a>
+<a class="btn" href="https://github.com/JunyiZhu-AI/R-GAP">Code</a></div>
+<img class="paper-fig" src="../../assets/img/pub/fig/rgap.jpg" alt="Key figure from the paper" loading="lazy">
+<h2 class="paper-h">In brief</h2>
+<p class="paper-summary">R-GAP established a third family of gradient privacy attacks: a closed-form, layer-by-layer recursion that reconstructs training data from gradients — the first such attack to work on both convolutional and fully connected networks, with or without bias terms. It runs orders of magnitude faster than optimization-based attacks with deterministic runtime, can fully recover data in cases where they fail, and its Rank Analysis predicts from the architecture alone whether recovery will be exact or provably noisy.</p>
+<h2 class="paper-h">Key takeaways</h2>
+<ul class="paper-takeaways">
+<li>A closed-form recursive procedure recovers data from gradients layer by layer — no optimization loop, no local optima, deterministic runtime orders of magnitude faster than DLG-style attacks, and applicable where the older bias-term attack fails (no bias, convolutions).</li>
+<li>Answers the open theory question of optimization attacks: Rank Analysis gives conditions under which gradients admit unique recovery, predicting full versus provably noisy reconstruction from the architecture's rank deficiency.</li>
+<li>The analysis surfaces &quot;twin data&quot; — different inputs producing identical gradients — explaining why DLG is sensitive to initialization: its objective can have multiple global minima.</li>
+<li>Rank analysis is actionable for defense: small architectural modifications guided by it increase a network's resistance to gradient leakage without sacrificing accuracy.</li>
+<li>Under certain conditions the recursive attack fully recovers training data where optimization-based attacks fail.</li>
+</ul>
+<h2 class="paper-h">Abstract</h2>
+<p class="paper-abstract">Federated learning frameworks have been regarded as a promising approach to break the dilemma between demands on privacy and the promise of learning from large collections of distributed data. Many such frameworks only ask collaborators to share their local update of a common model, i.e. gradients with respect to locally stored data, instead of exposing their raw data to other collaborators. However, recent optimization-based gradient attacks show that raw data can often be accurately recovered from gradients. It has been shown that minimizing the Euclidean distance between true gradients and those calculated from estimated data is often effective in fully recovering private data. However, there is a fundamental lack of theoretical understanding of how and when gradients can lead to unique recovery of original data. Our research fills this gap by providing a closed-form recursive procedure to recover data from gradients in deep neural networks. We name it Recursive Gradient Attack on Privacy (R-GAP). Experimental results demonstrate that R-GAP works as well as or even better than optimization-based approaches at a fraction of the computation under certain conditions. Additionally, we propose a Rank Analysis method, which can be used to estimate the risk of gradient attacks inherent in certain network architectures, regardless of whether an optimization-based or closed-form-recursive attack is used. Experimental results demonstrate the utility of the rank analysis towards improving the network's security.</p>
+<h2 class="paper-h">BibTeX</h2>
+<pre class="bibtex">@inproceedings{zhu_zhurgap,
+  title     = {R-GAP: Recursive Gradient Attack on Privacy},
+  author    = {Zhu, Junyi and Blaschko, Matthew B.},
+  year      = {2021},
+  booktitle = {International Conference on Learning Representations},
+  url       = {https://arxiv.org/abs/2010.07733},
+}</pre>
+</article>
+</main>
+
+<script>document.querySelectorAll('.js-email').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();location.href='mailto:'+a.dataset.u+'@'+a.dataset.d;});});</script>
+</body>
+</html>

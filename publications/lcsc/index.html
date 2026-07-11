@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Linear Combination of Saved Checkpoints Makes Consistency and Diffusion Models Better (ICLR 2025) — Junyi Zhu</title>
+<meta name="description" content="Training diffusion and consistency models discards a goldmine: the intermediate checkpoints.">
+<link rel="canonical" href="https://junyizhu-ai.github.io/publications/lcsc/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23141414'/%3E%3Ctext x='32' y='43' font-family='Helvetica,Arial,sans-serif' font-size='28' font-weight='700' fill='%23fff' text-anchor='middle'%3EJZ%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linear Combination of Saved Checkpoints Makes Consistency and Diffusion Models Better (ICLR 2025) — Junyi Zhu">
+<meta property="og:description" content="Training diffusion and consistency models discards a goldmine: the intermediate checkpoints.">
+<meta property="og:url" content="https://junyizhu-ai.github.io/publications/lcsc/">
+<meta property="og:image" content="https://junyizhu-ai.github.io/assets/img/pub/lcsc.jpg">
+<meta name="twitter:card" content="summary">
+<meta name="citation_title" content="Linear Combination of Saved Checkpoints Makes Consistency and Diffusion Models Better">
+<meta name="citation_author" content="Enshu Liu">
+<meta name="citation_author" content="Junyi Zhu">
+<meta name="citation_author" content="Zinan Lin">
+<meta name="citation_author" content="Xuefei Ning">
+<meta name="citation_author" content="Matthew B. Blaschko">
+<meta name="citation_author" content="Sergey Yekhanin">
+<meta name="citation_author" content="Shengen Yan">
+<meta name="citation_author" content="Guohao Dai">
+<meta name="citation_author" content="Huazhong Yang">
+<meta name="citation_author" content="Yu Wang">
+<meta name="citation_publication_date" content="2025">
+<meta name="citation_arxiv_id" content="2404.02241">
+<meta name="citation_pdf_url" content="https://arxiv.org/pdf/2404.02241">
+<meta name="citation_doi" content="10.48550/arXiv.2404.02241">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/main.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ScholarlyArticle","headline":"Linear Combination of Saved Checkpoints Makes Consistency and Diffusion Models Better","name":"Linear Combination of Saved Checkpoints Makes Consistency and Diffusion Models Better","author":[{"@type":"Person","name":"Enshu Liu"},{"@type":"Person","name":"Junyi Zhu","url":"https://junyizhu-ai.github.io","sameAs":["https://scholar.google.com/citations?user=3LeC4cMAAAAJ","https://www.linkedin.com/in/junyi-zhu-ai/"]},{"@type":"Person","name":"Zinan Lin"},{"@type":"Person","name":"Xuefei Ning"},{"@type":"Person","name":"Matthew B. Blaschko"},{"@type":"Person","name":"Sergey Yekhanin"},{"@type":"Person","name":"Shengen Yan"},{"@type":"Person","name":"Guohao Dai"},{"@type":"Person","name":"Huazhong Yang"},{"@type":"Person","name":"Yu Wang"}],"datePublished":"2025","publisher":{"@type":"Organization","name":"International Conference on Learning Representations"},"abstract":"Diffusion Models (DM) and Consistency Models (CM) are two types of popular generative models with good generation quality on various tasks. When training DM and CM, intermediate weight checkpoints are not fully utilized and only the last converged checkpoint is used. In this work, we find that high-quality model weights often lie in a basin which cannot be reached by SGD but can be obtained by proper checkpoint averaging. Based on these observations, we propose LCSC, a simple but effective and efficient method to enhance the performance of DM and CM, by combining checkpoints along the training trajectory with coefficients deduced from evolutionary search. We demonstrate the value of LCSC through two use cases: (a) Reducing training cost. With LCSC, we only need to train DM/CM with fewer number of iterations and/or lower batch sizes to obtain comparable sample quality with the fully trained model. For example, LCSC achieves considerable training speedups for CM (23x on CIFAR-10 and 15x on ImageNet-64). (b) Enhancing pre-trained models. Assuming full training is already done, LCSC can further improve the generation quality or speed of the final converged models. For example, LCSC achieves better performance using 1 number of function evaluation (NFE) than the base model with 2 NFE on consistency distillation, and decreases the NFE of DM from 15 to 9 while maintaining the generation quality on CIFAR-10.","url":"https://junyizhu-ai.github.io/publications/lcsc/","mainEntityOfPage":"https://junyizhu-ai.github.io/publications/lcsc/","sameAs":["https://arxiv.org/abs/2404.02241","https://arxiv.org/abs/2404.02241","https://doi.org/10.48550/arXiv.2404.02241"],"identifier":[{"@type":"PropertyValue","propertyID":"arXiv","value":"2404.02241"},{"@type":"PropertyValue","propertyID":"DOI","value":"10.48550/arXiv.2404.02241"}],"image":"https://junyizhu-ai.github.io/assets/img/pub/lcsc.jpg"}</script>
+</head>
+<body>
+<header class="top"><div class="top-inner">
+<a class="top-name" href="../../">Junyi Zhu</a>
+<nav class="top-nav">
+<a href="../../publications/" style="color:var(--ink);font-weight:700">Publications</a>
+<a href="https://scholar.google.com/citations?user=3LeC4cMAAAAJ">Google Scholar</a>
+<a href="#contact" class="js-email accent" data-u="junyizhu.ai" data-d="gmail.com" rel="nofollow">Email</a>
+</nav>
+</div></header>
+<main class="page">
+<a class="back-link" href="../">← All publications</a>
+<article>
+<h1 class="paper-title">Linear Combination of Saved Checkpoints Makes Consistency and Diffusion Models Better</h1>
+<p class="paper-authors">Enshu Liu*, <strong>Junyi Zhu*</strong>, Zinan Lin, Xuefei Ning, Matthew B. Blaschko, Sergey Yekhanin, Shengen Yan, Guohao Dai, Huazhong Yang, Yu Wang</p>
+<p class="paper-venue"><span class="venue">ICLR 2025</span><span class="pub-note">* = Co-first authors</span><span style="margin-left:8px">International Conference on Learning Representations</span></p>
+<div class="paper-links"><a class="btn" href="https://arxiv.org/abs/2404.02241">arXiv</a>
+<a class="btn" href="https://github.com/imagination-research/LCSC">Code</a></div>
+<img class="paper-fig" src="../../assets/img/pub/fig/lcsc.jpg" alt="Key figure from the paper" loading="lazy">
+<h2 class="paper-h">In brief</h2>
+<p class="paper-summary">Training diffusion and consistency models discards a goldmine: the intermediate checkpoints. LCSC uses gradient-free evolutionary search to find a linear combination of saved checkpoints that beats any single one — including the EMA weights that virtually every diffusion pipeline uses by default, which the paper proves suboptimal. The result: up to 23x cheaper consistency-model training, one-step models that beat two-step baselines, and improved text-to-image generation, all without additional training.</p>
+<h2 class="paper-h">Key takeaways</h2>
+<ul class="paper-takeaways">
+<li>High-quality weight basins sit near the training trajectory but cannot be reached by SGD or Adam — a linear combination of saved checkpoints can reach them, and searching the coefficients is gradient-free, so even non-differentiable metrics like FID can be optimized directly.</li>
+<li>EMA, the default weight-averaging in nearly every diffusion/consistency pipeline, is provably suboptimal; the searched coefficients include large negative values, meaning the best models lie outside the convex hull that averaging methods are confined to.</li>
+<li>Cuts training cost: on CIFAR-10, consistency distillation with only 50K iterations beats the fully trained 800K model (FID 3.10 vs 3.66), and small-batch training pushes the speedup to 23x (15x on ImageNet-64).</li>
+<li>Upgrades finished models: one-step sampling beats the released model's two-step FID on CIFAR-10 (2.44 vs 2.93), and diffusion sampling drops from 15 to 9 NFE at equal quality — users can briefly fine-tune a released checkpoint and apply LCSC.</li>
+<li>Works on LoRA checkpoints (ImageNet-64 consistency training: FID 15.75 to 4.90) and on text-to-image LCM-LoRA, where LCSC outputs win 66-77% of image comparisons on human-preference metrics.</li>
+</ul>
+<h2 class="paper-h">Abstract</h2>
+<p class="paper-abstract">Diffusion Models (DM) and Consistency Models (CM) are two types of popular generative models with good generation quality on various tasks. When training DM and CM, intermediate weight checkpoints are not fully utilized and only the last converged checkpoint is used. In this work, we find that high-quality model weights often lie in a basin which cannot be reached by SGD but can be obtained by proper checkpoint averaging. Based on these observations, we propose LCSC, a simple but effective and efficient method to enhance the performance of DM and CM, by combining checkpoints along the training trajectory with coefficients deduced from evolutionary search. We demonstrate the value of LCSC through two use cases: (a) Reducing training cost. With LCSC, we only need to train DM/CM with fewer number of iterations and/or lower batch sizes to obtain comparable sample quality with the fully trained model. For example, LCSC achieves considerable training speedups for CM (23x on CIFAR-10 and 15x on ImageNet-64). (b) Enhancing pre-trained models. Assuming full training is already done, LCSC can further improve the generation quality or speed of the final converged models. For example, LCSC achieves better performance using 1 number of function evaluation (NFE) than the base model with 2 NFE on consistency distillation, and decreases the NFE of DM from 15 to 9 while maintaining the generation quality on CIFAR-10.</p>
+<h2 class="paper-h">BibTeX</h2>
+<pre class="bibtex">@inproceedings{zhu_lcsc,
+  title     = {Linear Combination of Saved Checkpoints Makes Consistency and Diffusion Models Better},
+  author    = {Liu, Enshu and Zhu, Junyi and Lin, Zinan and Ning, Xuefei and Blaschko, Matthew B. and Yekhanin, Sergey and Yan, Shengen and Dai, Guohao and Yang, Huazhong and Wang, Yu},
+  year      = {2025},
+  booktitle = {International Conference on Learning Representations},
+  url       = {https://arxiv.org/abs/2404.02241},
+}</pre>
+</article>
+</main>
+
+<script>document.querySelectorAll('.js-email').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();location.href='mailto:'+a.dataset.u+'@'+a.dataset.d;});});</script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Decoding Text Spans for Efficient and Accurate Named-Entity Recognition (ACL 2026) — Junyi Zhu</title>
+<meta name="description" content="SpanDec is a span-based named-entity recognition framework built for industrial deployment, where latency and throughput matter as much as accuracy.">
+<link rel="canonical" href="https://junyizhu-ai.github.io/publications/spandec/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23141414'/%3E%3Ctext x='32' y='43' font-family='Helvetica,Arial,sans-serif' font-size='28' font-weight='700' fill='%23fff' text-anchor='middle'%3EJZ%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Decoding Text Spans for Efficient and Accurate Named-Entity Recognition (ACL 2026) — Junyi Zhu">
+<meta property="og:description" content="SpanDec is a span-based named-entity recognition framework built for industrial deployment, where latency and throughput matter as much as accuracy.">
+<meta property="og:url" content="https://junyizhu-ai.github.io/publications/spandec/">
+<meta property="og:image" content="https://junyizhu-ai.github.io/assets/img/pub/spandec.jpg">
+<meta name="twitter:card" content="summary">
+<meta name="citation_title" content="Decoding Text Spans for Efficient and Accurate Named-Entity Recognition">
+<meta name="citation_author" content="Andrea Maracani">
+<meta name="citation_author" content="Savas Ozkan">
+<meta name="citation_author" content="Junyi Zhu">
+<meta name="citation_author" content="Sinan Mutlu">
+<meta name="citation_author" content="Mete Ozay">
+<meta name="citation_publication_date" content="2026">
+<meta name="citation_arxiv_id" content="2604.20447">
+<meta name="citation_pdf_url" content="https://arxiv.org/pdf/2604.20447">
+<meta name="citation_doi" content="10.48550/arXiv.2604.20447">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/main.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ScholarlyArticle","headline":"Decoding Text Spans for Efficient and Accurate Named-Entity Recognition","name":"Decoding Text Spans for Efficient and Accurate Named-Entity Recognition","author":[{"@type":"Person","name":"Andrea Maracani"},{"@type":"Person","name":"Savas Ozkan"},{"@type":"Person","name":"Junyi Zhu","url":"https://junyizhu-ai.github.io","sameAs":["https://scholar.google.com/citations?user=3LeC4cMAAAAJ","https://www.linkedin.com/in/junyi-zhu-ai/"]},{"@type":"Person","name":"Sinan Mutlu"},{"@type":"Person","name":"Mete Ozay"}],"datePublished":"2026","publisher":{"@type":"Organization","name":"Annual Meeting of the Association for Computational Linguistics"},"abstract":"Named Entity Recognition (NER) is a key component in industrial information extraction pipelines, where systems must satisfy strict latency and throughput constraints in addition to strong accuracy. State-of-the-art NER accuracy is often achieved by span-based frameworks, which construct span representations from token encodings and classify candidate spans. However, many span-based methods enumerate large numbers of candidates and process each candidate with marker-augmented inputs, substantially increasing inference cost and limiting scalability in large-scale deployments. In this work, we propose SpanDec, an efficient span-based NER framework that targets this bottleneck. Our main insight is that span representation interactions can be computed effectively at the final transformer stage, avoiding redundant computation in earlier layers via a lightweight decoder dedicated to span representations. We further introduce a span filtering mechanism during enumeration to prune unlikely candidates before expensive processing. Across multiple benchmarks, SpanDec matches competitive span-based baselines while improving throughput and reducing computational cost, yielding a better accuracy-efficiency trade-off suitable for high-volume serving and on-device applications.","url":"https://junyizhu-ai.github.io/publications/spandec/","mainEntityOfPage":"https://junyizhu-ai.github.io/publications/spandec/","sameAs":["https://arxiv.org/abs/2604.20447","https://arxiv.org/abs/2604.20447","https://doi.org/10.48550/arXiv.2604.20447"],"identifier":[{"@type":"PropertyValue","propertyID":"arXiv","value":"2604.20447"},{"@type":"PropertyValue","propertyID":"DOI","value":"10.48550/arXiv.2604.20447"}],"image":"https://junyizhu-ai.github.io/assets/img/pub/spandec.jpg"}</script>
+</head>
+<body>
+<header class="top"><div class="top-inner">
+<a class="top-name" href="../../">Junyi Zhu</a>
+<nav class="top-nav">
+<a href="../../publications/" style="color:var(--ink);font-weight:700">Publications</a>
+<a href="https://scholar.google.com/citations?user=3LeC4cMAAAAJ">Google Scholar</a>
+<a href="#contact" class="js-email accent" data-u="junyizhu.ai" data-d="gmail.com" rel="nofollow">Email</a>
+</nav>
+</div></header>
+<main class="page">
+<a class="back-link" href="../">← All publications</a>
+<article>
+<h1 class="paper-title">Decoding Text Spans for Efficient and Accurate Named-Entity Recognition</h1>
+<p class="paper-authors">Andrea Maracani, Savas Ozkan, <strong>Junyi Zhu</strong>, Sinan Mutlu, Mete Ozay</p>
+<p class="paper-venue"><span class="venue">ACL 2026</span><span style="margin-left:8px">Annual Meeting of the Association for Computational Linguistics</span></p>
+<div class="paper-links"><a class="btn" href="https://arxiv.org/abs/2604.20447">arXiv</a></div>
+<img class="paper-fig" src="../../assets/img/pub/fig/spandec.jpg" alt="Key figure from the paper" loading="lazy">
+<h2 class="paper-h">In brief</h2>
+<p class="paper-summary">SpanDec is a span-based named-entity recognition framework built for industrial deployment, where latency and throughput matter as much as accuracy. A lightweight decoder computes span-representation interactions only at the final transformer stage, and a filtering mechanism prunes unlikely candidates early — matching strong span-based baselines at a much better accuracy-efficiency trade-off.</p>
+<h2 class="paper-h">Key takeaways</h2>
+<ul class="paper-takeaways">
+<li>Span-representation interactions can be computed at the final transformer stage via a lightweight dedicated decoder, avoiding redundant computation in earlier layers.</li>
+<li>A span filtering mechanism prunes unlikely candidates during enumeration, before expensive processing.</li>
+<li>Matches competitive span-based NER baselines while improving throughput and reducing computational cost.</li>
+<li>The accuracy-efficiency trade-off suits high-volume serving and on-device applications.</li>
+<li>Ablations show a single decoder layer is sufficient — deeper span decoders add computation without accuracy gains.</li>
+</ul>
+<h2 class="paper-h">Abstract</h2>
+<p class="paper-abstract">Named Entity Recognition (NER) is a key component in industrial information extraction pipelines, where systems must satisfy strict latency and throughput constraints in addition to strong accuracy. State-of-the-art NER accuracy is often achieved by span-based frameworks, which construct span representations from token encodings and classify candidate spans. However, many span-based methods enumerate large numbers of candidates and process each candidate with marker-augmented inputs, substantially increasing inference cost and limiting scalability in large-scale deployments. In this work, we propose SpanDec, an efficient span-based NER framework that targets this bottleneck. Our main insight is that span representation interactions can be computed effectively at the final transformer stage, avoiding redundant computation in earlier layers via a lightweight decoder dedicated to span representations. We further introduce a span filtering mechanism during enumeration to prune unlikely candidates before expensive processing. Across multiple benchmarks, SpanDec matches competitive span-based baselines while improving throughput and reducing computational cost, yielding a better accuracy-efficiency trade-off suitable for high-volume serving and on-device applications.</p>
+<h2 class="paper-h">BibTeX</h2>
+<pre class="bibtex">@inproceedings{zhu_spandec,
+  title     = {Decoding Text Spans for Efficient and Accurate Named-Entity Recognition},
+  author    = {Maracani, Andrea and Ozkan, Savas and Zhu, Junyi and Mutlu, Sinan and Ozay, Mete},
+  year      = {2026},
+  booktitle = {Annual Meeting of the Association for Computational Linguistics},
+  url       = {https://arxiv.org/abs/2604.20447},
+}</pre>
+</article>
+</main>
+
+<script>document.querySelectorAll('.js-email').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();location.href='mailto:'+a.dataset.u+'@'+a.dataset.d;});});</script>
+</body>
+</html>

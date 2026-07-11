@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Improving Differentially Private SGD via Randomly Sparsified Gradients (TMLR 2023) — Junyi Zhu</title>
+<meta name="description" content="Analyzing the convergence of differentially private SGD reveals a surprising property: randomly zeroing out gradient coordinates before clipping and noising can tighten the convergence bound when noise dominates.">
+<link rel="canonical" href="https://junyizhu-ai.github.io/publications/dp-sgd-random-sparsification/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23141414'/%3E%3Ctext x='32' y='43' font-family='Helvetica,Arial,sans-serif' font-size='28' font-weight='700' fill='%23fff' text-anchor='middle'%3EJZ%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Improving Differentially Private SGD via Randomly Sparsified Gradients (TMLR 2023) — Junyi Zhu">
+<meta property="og:description" content="Analyzing the convergence of differentially private SGD reveals a surprising property: randomly zeroing out gradient coordinates before clipping and noising can tighten the convergence bound when noise dominates.">
+<meta property="og:url" content="https://junyizhu-ai.github.io/publications/dp-sgd-random-sparsification/">
+<meta property="og:image" content="https://junyizhu-ai.github.io/assets/img/pub/rs.jpg">
+<meta name="twitter:card" content="summary">
+<meta name="citation_title" content="Improving Differentially Private SGD via Randomly Sparsified Gradients">
+<meta name="citation_author" content="Junyi Zhu">
+<meta name="citation_author" content="Matthew B. Blaschko">
+<meta name="citation_publication_date" content="2023">
+<meta name="citation_arxiv_id" content="2112.00845">
+<meta name="citation_pdf_url" content="https://arxiv.org/pdf/2112.00845">
+<meta name="citation_doi" content="10.48550/arXiv.2112.00845">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/main.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ScholarlyArticle","headline":"Improving Differentially Private SGD via Randomly Sparsified Gradients","name":"Improving Differentially Private SGD via Randomly Sparsified Gradients","author":[{"@type":"Person","name":"Junyi Zhu","url":"https://junyizhu-ai.github.io","sameAs":["https://scholar.google.com/citations?user=3LeC4cMAAAAJ","https://www.linkedin.com/in/junyi-zhu-ai/"]},{"@type":"Person","name":"Matthew B. Blaschko"}],"datePublished":"2023","publisher":{"@type":"Organization","name":"Transactions on Machine Learning Research"},"abstract":"Differentially private stochastic gradient descent (DP-SGD) has been widely adopted in deep learning to provide rigorously defined privacy, which requires gradient clipping to bound the maximum norm of individual gradients and additive isotropic Gaussian noise. With analysis of the convergence rate of DP-SGD in a non-convex setting, we identify that randomly sparsifying gradients before clipping and noisification adjusts a trade-off between internal components of the convergence bound and leads to a smaller upper bound when the noise is dominant. Additionally, our theoretical analysis and empirical evaluations show that the trade-off is not trivial but possibly a unique property of DP-SGD, as either canceling noisification or gradient clipping eliminates the trade-off in the bound. This observation is indicative, as it implies DP-SGD has special inherent room for (even simply random) gradient compression. To verify the observation and utilize it, we propose an efficient and lightweight extension using random sparsification (RS) to strengthen DP-SGD. Experiments with various DP-SGD frameworks show that RS can improve performance. Additionally, the produced sparse gradients of RS exhibit advantages in reducing communication cost and strengthening privacy against reconstruction attacks, which are also key problems in private machine learning.","url":"https://junyizhu-ai.github.io/publications/dp-sgd-random-sparsification/","mainEntityOfPage":"https://junyizhu-ai.github.io/publications/dp-sgd-random-sparsification/","sameAs":["https://arxiv.org/abs/2112.00845","https://openreview.net/forum?id=sY35BAiIf4","https://doi.org/10.48550/arXiv.2112.00845"],"identifier":[{"@type":"PropertyValue","propertyID":"arXiv","value":"2112.00845"},{"@type":"PropertyValue","propertyID":"DOI","value":"10.48550/arXiv.2112.00845"}],"image":"https://junyizhu-ai.github.io/assets/img/pub/rs.jpg"}</script>
+</head>
+<body>
+<header class="top"><div class="top-inner">
+<a class="top-name" href="../../">Junyi Zhu</a>
+<nav class="top-nav">
+<a href="../../publications/" style="color:var(--ink);font-weight:700">Publications</a>
+<a href="https://scholar.google.com/citations?user=3LeC4cMAAAAJ">Google Scholar</a>
+<a href="#contact" class="js-email accent" data-u="junyizhu.ai" data-d="gmail.com" rel="nofollow">Email</a>
+</nav>
+</div></header>
+<main class="page">
+<a class="back-link" href="../">← All publications</a>
+<article>
+<h1 class="paper-title">Improving Differentially Private SGD via Randomly Sparsified Gradients</h1>
+<p class="paper-authors"><strong>Junyi Zhu</strong>, Matthew B. Blaschko</p>
+<p class="paper-venue"><span class="venue">TMLR 2023</span><span style="margin-left:8px">Transactions on Machine Learning Research</span></p>
+<div class="paper-links"><a class="btn" href="https://arxiv.org/abs/2112.00845">arXiv</a>
+<a class="btn" href="https://openreview.net/forum?id=sY35BAiIf4">Publisher page</a>
+<a class="btn" href="https://github.com/JunyiZhu-AI/RandomSparsification">Code</a></div>
+<img class="paper-fig" src="../../assets/img/pub/fig/rs.jpg" alt="Key figure from the paper" loading="lazy">
+<h2 class="paper-h">In brief</h2>
+<p class="paper-summary">Analyzing the convergence of differentially private SGD reveals a surprising property: randomly zeroing out gradient coordinates before clipping and noising can tighten the convergence bound when noise dominates. The resulting random sparsification extension improves DP-SGD performance while also reducing communication cost and strengthening privacy against reconstruction attacks.</p>
+<h2 class="paper-h">Key takeaways</h2>
+<ul class="paper-takeaways">
+<li>Randomly sparsifying gradients before clipping and noisification adjusts a trade-off inside DP-SGD's convergence bound, yielding a smaller bound when noise is dominant.</li>
+<li>The trade-off appears to be a unique property of DP-SGD: removing either noisification or gradient clipping eliminates it.</li>
+<li>A lightweight random sparsification (RS) extension improves performance across various DP-SGD frameworks.</li>
+<li>The sparse gradients additionally reduce communication cost and strengthen privacy against reconstruction attacks.</li>
+</ul>
+<h2 class="paper-h">Abstract</h2>
+<p class="paper-abstract">Differentially private stochastic gradient descent (DP-SGD) has been widely adopted in deep learning to provide rigorously defined privacy, which requires gradient clipping to bound the maximum norm of individual gradients and additive isotropic Gaussian noise. With analysis of the convergence rate of DP-SGD in a non-convex setting, we identify that randomly sparsifying gradients before clipping and noisification adjusts a trade-off between internal components of the convergence bound and leads to a smaller upper bound when the noise is dominant. Additionally, our theoretical analysis and empirical evaluations show that the trade-off is not trivial but possibly a unique property of DP-SGD, as either canceling noisification or gradient clipping eliminates the trade-off in the bound. This observation is indicative, as it implies DP-SGD has special inherent room for (even simply random) gradient compression. To verify the observation and utilize it, we propose an efficient and lightweight extension using random sparsification (RS) to strengthen DP-SGD. Experiments with various DP-SGD frameworks show that RS can improve performance. Additionally, the produced sparse gradients of RS exhibit advantages in reducing communication cost and strengthening privacy against reconstruction attacks, which are also key problems in private machine learning.</p>
+<h2 class="paper-h">BibTeX</h2>
+<pre class="bibtex">@article{zhu_sparsification,
+  title     = {Improving Differentially Private SGD via Randomly Sparsified Gradients},
+  author    = {Zhu, Junyi and Blaschko, Matthew B.},
+  year      = {2023},
+  journal   = {Transactions on Machine Learning Research},
+  url       = {https://arxiv.org/abs/2112.00845},
+}</pre>
+</article>
+</main>
+
+<script>document.querySelectorAll('.js-email').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();location.href='mailto:'+a.dataset.u+'@'+a.dataset.d;});});</script>
+</body>
+</html>

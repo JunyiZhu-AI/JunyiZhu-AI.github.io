@@ -1,9 +1,0 @@
-# github_users:
-  #  - JunyiZhu-AI
-
-github_repos:
-  - imagination-research/LCSC
-  - IAAR-Shanghai/FastMem
-  - JunyiZhu-AI/R-GAP
-  - JunyiZhu-AI/confidence_aware_PFL
-  - JunyiZhu-AI/surrogate_model_extension

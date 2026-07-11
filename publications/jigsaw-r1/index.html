@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jigsaw-R1: A Study of Rule-based Visual Reinforcement Learning with Jigsaw Puzzles (TMLR 2025) — Junyi Zhu</title>
+<meta name="description" content="A DeepSeek-R1-style study of rule-based reinforcement learning for multimodal LLMs, using jigsaw puzzles as a fully label-free training signal: shuffling any image collection generates its own verifiable ground truth, with difficulty adjustable by grid size.">
+<link rel="canonical" href="https://junyizhu-ai.github.io/publications/jigsaw-r1/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23141414'/%3E%3Ctext x='32' y='43' font-family='Helvetica,Arial,sans-serif' font-size='28' font-weight='700' fill='%23fff' text-anchor='middle'%3EJZ%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Jigsaw-R1: A Study of Rule-based Visual Reinforcement Learning with Jigsaw Puzzles (TMLR 2025) — Junyi Zhu">
+<meta property="og:description" content="A DeepSeek-R1-style study of rule-based reinforcement learning for multimodal LLMs, using jigsaw puzzles as a fully label-free training signal: shuffling any image collection generates its own verifiable ground truth, with difficulty adjustable by grid size.">
+<meta property="og:url" content="https://junyizhu-ai.github.io/publications/jigsaw-r1/">
+<meta property="og:image" content="https://junyizhu-ai.github.io/assets/img/pub/jigsaw.jpg">
+<meta name="twitter:card" content="summary">
+<meta name="citation_title" content="Jigsaw-R1: A Study of Rule-based Visual Reinforcement Learning with Jigsaw Puzzles">
+<meta name="citation_author" content="Zifu Wang">
+<meta name="citation_author" content="Junyi Zhu">
+<meta name="citation_author" content="Bo Tang">
+<meta name="citation_author" content="Zhiyu Li">
+<meta name="citation_author" content="Feiyu Xiong">
+<meta name="citation_author" content="Jiaqian Yu">
+<meta name="citation_author" content="Matthew B. Blaschko">
+<meta name="citation_publication_date" content="2025">
+<meta name="citation_arxiv_id" content="2505.23590">
+<meta name="citation_pdf_url" content="https://arxiv.org/pdf/2505.23590">
+<meta name="citation_doi" content="10.48550/arXiv.2505.23590">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/main.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ScholarlyArticle","headline":"Jigsaw-R1: A Study of Rule-based Visual Reinforcement Learning with Jigsaw Puzzles","name":"Jigsaw-R1: A Study of Rule-based Visual Reinforcement Learning with Jigsaw Puzzles","author":[{"@type":"Person","name":"Zifu Wang"},{"@type":"Person","name":"Junyi Zhu","url":"https://junyizhu-ai.github.io","sameAs":["https://scholar.google.com/citations?user=3LeC4cMAAAAJ","https://www.linkedin.com/in/junyi-zhu-ai/"]},{"@type":"Person","name":"Bo Tang"},{"@type":"Person","name":"Zhiyu Li"},{"@type":"Person","name":"Feiyu Xiong"},{"@type":"Person","name":"Jiaqian Yu"},{"@type":"Person","name":"Matthew B. Blaschko"}],"datePublished":"2025","publisher":{"@type":"Organization","name":"Transactions on Machine Learning Research"},"abstract":"The application of rule-based reinforcement learning (RL) to multimodal large language models (MLLMs) introduces unique challenges and potential deviations from findings in text-only domains, particularly for perception-heavy tasks. This paper provides a comprehensive study of rule-based visual RL, using jigsaw puzzles as a structured experimental framework. Jigsaw puzzles offer inherent ground truth, adjustable difficulty, and demand complex decision-making, making them ideal for this study. Our research reveals several key findings: Firstly, we find that MLLMs, initially performing near to random guessing on the simplest jigsaw puzzles, achieve near-perfect accuracy and generalize to complex, unseen configurations through fine-tuning. Secondly, training on jigsaw puzzles can induce generalization to other visual tasks, with effectiveness tied to specific task configurations. Thirdly, MLLMs can learn and generalize with or without explicit reasoning, though open-source models often favor direct answering. Consequently, even when trained for step-by-step reasoning, they can ignore the thinking process in deriving the final answer. Fourthly, we observe that complex reasoning patterns appear to be pre-existing rather than emergent, with their frequency increasing alongside training and task difficulty. Finally, our results demonstrate that RL exhibits more effective generalization than Supervised Fine-Tuning (SFT), and an initial SFT cold start phase can hinder subsequent RL optimization. Although these observations are based on jigsaw puzzles and may vary across other visual tasks, this research contributes a valuable piece of jigsaw to the larger puzzle of collective understanding rule-based visual RL and its potential in multimodal learning.","url":"https://junyizhu-ai.github.io/publications/jigsaw-r1/","mainEntityOfPage":"https://junyizhu-ai.github.io/publications/jigsaw-r1/","sameAs":["https://arxiv.org/abs/2505.23590","https://arxiv.org/abs/2505.23590","https://doi.org/10.48550/arXiv.2505.23590"],"identifier":[{"@type":"PropertyValue","propertyID":"arXiv","value":"2505.23590"},{"@type":"PropertyValue","propertyID":"DOI","value":"10.48550/arXiv.2505.23590"}],"image":"https://junyizhu-ai.github.io/assets/img/pub/jigsaw.jpg"}</script>
+</head>
+<body>
+<header class="top"><div class="top-inner">
+<a class="top-name" href="../../">Junyi Zhu</a>
+<nav class="top-nav">
+<a href="../../publications/" style="color:var(--ink);font-weight:700">Publications</a>
+<a href="https://scholar.google.com/citations?user=3LeC4cMAAAAJ">Google Scholar</a>
+<a href="#contact" class="js-email accent" data-u="junyizhu.ai" data-d="gmail.com" rel="nofollow">Email</a>
+</nav>
+</div></header>
+<main class="page">
+<a class="back-link" href="../">← All publications</a>
+<article>
+<h1 class="paper-title">Jigsaw-R1: A Study of Rule-based Visual Reinforcement Learning with Jigsaw Puzzles</h1>
+<p class="paper-authors">Zifu Wang*, <strong>Junyi Zhu*</strong>, Bo Tang*, Zhiyu Li, Feiyu Xiong, Jiaqian Yu, Matthew B. Blaschko</p>
+<p class="paper-venue"><span class="venue">TMLR 2025</span><span class="pub-note">* = Co-first authors</span><span style="margin-left:8px">Transactions on Machine Learning Research</span></p>
+<div class="paper-links"><a class="btn" href="https://arxiv.org/abs/2505.23590">arXiv</a>
+<a class="btn" href="https://github.com/zifuwanggg/Jigsaw-R1">Code</a></div>
+<img class="paper-fig" src="../../assets/img/pub/fig/jigsaw.jpg" alt="Key figure from the paper" loading="lazy">
+<h2 class="paper-h">In brief</h2>
+<p class="paper-summary">A DeepSeek-R1-style study of rule-based reinforcement learning for multimodal LLMs, using jigsaw puzzles as a fully label-free training signal: shuffling any image collection generates its own verifiable ground truth, with difficulty adjustable by grid size. RL-tuned models go from near-random guessing to near-perfect accuracy (e.g. Qwen2.5-VL-7B: 49.4% to 98.9% on 2x1 pair puzzles), generalize to puzzle sizes never seen in training, and transfer to real perception benchmarks — all without a single human annotation.</p>
+<h2 class="paper-h">Key takeaways</h2>
+<ul class="paper-takeaways">
+<li>Jigsaw puzzles are a label-free RL signal: rewards are generated by rule from any image collection, with no human annotation — which even makes label-free training on the test set legitimate, pointing toward test-time training applications.</li>
+<li>Before fine-tuning, even GPT-4.1 and Qwen2.5-VL-72B perform near random guessing on the simplest 2x1 puzzles; after rule-based RL, small open models reach 97-99% and generalize to unseen, larger configurations.</li>
+<li>Puzzle training transfers to downstream perception tasks: Qwen2.5-VL-7B (thinking) gains +6.4 points on average across CV-Bench, MMVP, SAT and Super-CLEVR, and GUI grounding on ScreenSpot jumps from 57.4 to 72.5 — despite training only on COCO puzzles.</li>
+<li>No &quot;aha moment&quot;: verification, backtracking, subgoal setting and backward chaining all pre-exist in MLLMs before training; their frequency grows steadily with training and task difficulty rather than emerging suddenly.</li>
+<li>A reasoning-faithfulness caveat: open-source MLLMs favor direct answering, and even when trained to think step by step, their (correct) final answers grow increasingly inconsistent with the stated reasoning chain.</li>
+<li>RL generalizes better than SFT, and an SFT cold-start phase before RL can make the subsequent RL optimization less effective.</li>
+</ul>
+<h2 class="paper-h">Abstract</h2>
+<p class="paper-abstract">The application of rule-based reinforcement learning (RL) to multimodal large language models (MLLMs) introduces unique challenges and potential deviations from findings in text-only domains, particularly for perception-heavy tasks. This paper provides a comprehensive study of rule-based visual RL, using jigsaw puzzles as a structured experimental framework. Jigsaw puzzles offer inherent ground truth, adjustable difficulty, and demand complex decision-making, making them ideal for this study. Our research reveals several key findings: Firstly, we find that MLLMs, initially performing near to random guessing on the simplest jigsaw puzzles, achieve near-perfect accuracy and generalize to complex, unseen configurations through fine-tuning. Secondly, training on jigsaw puzzles can induce generalization to other visual tasks, with effectiveness tied to specific task configurations. Thirdly, MLLMs can learn and generalize with or without explicit reasoning, though open-source models often favor direct answering. Consequently, even when trained for step-by-step reasoning, they can ignore the thinking process in deriving the final answer. Fourthly, we observe that complex reasoning patterns appear to be pre-existing rather than emergent, with their frequency increasing alongside training and task difficulty. Finally, our results demonstrate that RL exhibits more effective generalization than Supervised Fine-Tuning (SFT), and an initial SFT cold start phase can hinder subsequent RL optimization. Although these observations are based on jigsaw puzzles and may vary across other visual tasks, this research contributes a valuable piece of jigsaw to the larger puzzle of collective understanding rule-based visual RL and its potential in multimodal learning.</p>
+<h2 class="paper-h">BibTeX</h2>
+<pre class="bibtex">@article{zhu_jigsaw,
+  title     = {Jigsaw-R1: A Study of Rule-based Visual Reinforcement Learning with Jigsaw Puzzles},
+  author    = {Wang, Zifu and Zhu, Junyi and Tang, Bo and Li, Zhiyu and Xiong, Feiyu and Yu, Jiaqian and Blaschko, Matthew B.},
+  year      = {2025},
+  journal   = {Transactions on Machine Learning Research},
+  url       = {https://arxiv.org/abs/2505.23590},
+}</pre>
+</article>
+</main>
+
+<script>document.querySelectorAll('.js-email').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();location.href='mailto:'+a.dataset.u+'@'+a.dataset.d;});});</script>
+</body>
+</html>

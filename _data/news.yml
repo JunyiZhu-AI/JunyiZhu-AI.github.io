@@ -1,0 +1,11 @@
+# One item per entry. date: YYYY-MM-DD, text: single line (HTML links allowed).
+- date: 2026-05-17
+  text: Our paper "GraTAG: Production AI Search via Graph-Based Query Decomposition and Triplet Aligned Generation with Rich Multimodal Representations" has been accepted to the KDD Industry Track. A link to the paper will be available soon.
+- date: 2026-04-04
+  text: Our paper <a href="https://arxiv.org/pdf/2604.20447">Decoding Text Spans for Efficient and Accurate Named-Entity Recognition</a> has been accepted to ACL 2026 Industry Track as an oral presentation.
+- date: 2025-09-18
+  text: Our paper <a href="https://arxiv.org/abs/2509.15591">Latent Zoning Network: A Unified Principle for Generative Modeling, Representation Learning, and Classification</a> has been accepted at NeurIPS 2025.
+- date: 2025-09-14
+  text: I am honored to serve as an Area Chair for CVPR 2026. I look forward to contributing to the community and supporting the review process in this role.
+- date: 2025-09-05
+  text: Our paper <a href="https://www.arxiv.org/abs/2503.20138">Guided Model Merging for Hybrid Data Learning: Leveraging Centralized Data to Refine Decentralized Models</a> has been accepted at WACV 2026 (Round 1, accceptance rate 6.3%).

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Latent Zoning Network: A Unified Principle for Generative Modeling, Representation Learning, and Classification (NeurIPS 2025) — Junyi Zhu</title>
+<meta name="description" content="LZN asks whether one principle can unify generative modeling, representation learning, and classification: a shared Gaussian latent space in which each data type (images, text, labels) has an encoder mapping samples to disjoint latent zones and a decoder mapping back, so that tasks become compositions of encoders and decoders.">
+<link rel="canonical" href="https://junyizhu-ai.github.io/publications/latent-zoning-network/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23141414'/%3E%3Ctext x='32' y='43' font-family='Helvetica,Arial,sans-serif' font-size='28' font-weight='700' fill='%23fff' text-anchor='middle'%3EJZ%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Latent Zoning Network: A Unified Principle for Generative Modeling, Representation Learning, and Classification (NeurIPS 2025) — Junyi Zhu">
+<meta property="og:description" content="LZN asks whether one principle can unify generative modeling, representation learning, and classification: a shared Gaussian latent space in which each data type (images, text, labels) has an encoder mapping samples to disjoint latent zones and a decoder mapping back, so that tasks become compositions of encoders and decoders.">
+<meta property="og:url" content="https://junyizhu-ai.github.io/publications/latent-zoning-network/">
+<meta property="og:image" content="https://junyizhu-ai.github.io/assets/img/pub/lzn.jpg">
+<meta name="twitter:card" content="summary">
+<meta name="citation_title" content="Latent Zoning Network: A Unified Principle for Generative Modeling, Representation Learning, and Classification">
+<meta name="citation_author" content="Zinan Lin">
+<meta name="citation_author" content="Enshu Liu">
+<meta name="citation_author" content="Xuefei Ning">
+<meta name="citation_author" content="Junyi Zhu">
+<meta name="citation_author" content="Wenyu Wang">
+<meta name="citation_author" content="Sergey Yekhanin">
+<meta name="citation_publication_date" content="2025">
+<meta name="citation_arxiv_id" content="2509.15591">
+<meta name="citation_pdf_url" content="https://arxiv.org/pdf/2509.15591">
+<meta name="citation_doi" content="10.48550/arXiv.2509.15591">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/main.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ScholarlyArticle","headline":"Latent Zoning Network: A Unified Principle for Generative Modeling, Representation Learning, and Classification","name":"Latent Zoning Network: A Unified Principle for Generative Modeling, Representation Learning, and Classification","author":[{"@type":"Person","name":"Zinan Lin"},{"@type":"Person","name":"Enshu Liu"},{"@type":"Person","name":"Xuefei Ning"},{"@type":"Person","name":"Junyi Zhu","url":"https://junyizhu-ai.github.io","sameAs":["https://scholar.google.com/citations?user=3LeC4cMAAAAJ","https://www.linkedin.com/in/junyi-zhu-ai/"]},{"@type":"Person","name":"Wenyu Wang"},{"@type":"Person","name":"Sergey Yekhanin"}],"datePublished":"2025","publisher":{"@type":"Organization","name":"Conference on Neural Information Processing Systems"},"abstract":"Generative modeling, representation learning, and classification are three core problems in machine learning (ML), yet their state-of-the-art (SoTA) solutions remain largely disjoint. In this paper, we ask: Can a unified principle address all three? Such unification could simplify ML pipelines and foster greater synergy across tasks. We introduce Latent Zoning Network (LZN) as a step toward this goal. At its core, LZN creates a shared Gaussian latent space that encodes information across all tasks. Each data type (e.g., images, text, labels) is equipped with an encoder that maps samples to disjoint latent zones, and a decoder that maps latents back to data. ML tasks are expressed as compositions of these encoders and decoders: for example, label-conditional image generation uses a label encoder and image decoder; image embedding uses an image encoder; classification uses an image encoder and label decoder. We demonstrate the promise of LZN in three increasingly complex scenarios: (1) LZN can enhance existing models (image generation): When combined with the SoTA Rectified Flow model, LZN improves FID on CIFAR10 from 2.76 to 2.59 without modifying the training objective. (2) LZN can solve tasks independently (representation learning): LZN can implement unsupervised representation learning without auxiliary loss functions, outperforming the seminal MoCo and SimCLR methods by 9.3% and 0.2%, respectively, on downstream linear classification on ImageNet. (3) LZN can solve multiple tasks simultaneously (joint generation and classification): With image and label encoders/decoders, LZN performs both tasks jointly by design, improving FID and achieving SoTA classification accuracy on CIFAR10.","url":"https://junyizhu-ai.github.io/publications/latent-zoning-network/","mainEntityOfPage":"https://junyizhu-ai.github.io/publications/latent-zoning-network/","sameAs":["https://arxiv.org/abs/2509.15591","https://arxiv.org/abs/2509.15591","https://doi.org/10.48550/arXiv.2509.15591"],"identifier":[{"@type":"PropertyValue","propertyID":"arXiv","value":"2509.15591"},{"@type":"PropertyValue","propertyID":"DOI","value":"10.48550/arXiv.2509.15591"}],"image":"https://junyizhu-ai.github.io/assets/img/pub/lzn.jpg"}</script>
+</head>
+<body>
+<header class="top"><div class="top-inner">
+<a class="top-name" href="../../">Junyi Zhu</a>
+<nav class="top-nav">
+<a href="../../publications/" style="color:var(--ink);font-weight:700">Publications</a>
+<a href="https://scholar.google.com/citations?user=3LeC4cMAAAAJ">Google Scholar</a>
+<a href="#contact" class="js-email accent" data-u="junyizhu.ai" data-d="gmail.com" rel="nofollow">Email</a>
+</nav>
+</div></header>
+<main class="page">
+<a class="back-link" href="../">← All publications</a>
+<article>
+<h1 class="paper-title">Latent Zoning Network: A Unified Principle for Generative Modeling, Representation Learning, and Classification</h1>
+<p class="paper-authors">Zinan Lin, Enshu Liu, Xuefei Ning, <strong>Junyi Zhu</strong>, Wenyu Wang, Sergey Yekhanin</p>
+<p class="paper-venue"><span class="venue">NeurIPS 2025</span><span style="margin-left:8px">Conference on Neural Information Processing Systems</span></p>
+<div class="paper-links"><a class="btn" href="https://arxiv.org/abs/2509.15591">arXiv</a>
+<a class="btn" href="https://github.com/microsoft/latent-zoning-networks">Code</a></div>
+<img class="paper-fig" src="../../assets/img/pub/fig/lzn.jpg" alt="Key figure from the paper" loading="lazy">
+<h2 class="paper-h">In brief</h2>
+<p class="paper-summary">LZN asks whether one principle can unify generative modeling, representation learning, and classification: a shared Gaussian latent space in which each data type (images, text, labels) has an encoder mapping samples to disjoint latent zones and a decoder mapping back, so that tasks become compositions of encoders and decoders. Plugged into Rectified Flow it improves image generation; on its own it beats MoCo and SimCLR on ImageNet linear classification; and trained jointly, generation and classification each make the other better.</p>
+<h2 class="paper-h">Key takeaways</h2>
+<ul class="paper-takeaways">
+<li>Everything rests on two atomic operations: latent computation, where flow matching partitions a Gaussian latent space into disjoint per-sample zones, and latent alignment, a soft differentiable approximation of the discrete latent-to-anchor assignment.</li>
+<li>Used as a drop-in extra condition for Rectified Flow — without modifying the training objective — LZN improves generation on CIFAR10 (FID 2.76 to 2.59), AFHQ-Cat, CelebA-HQ and LSUN-Bedroom, and closes 59% of the FID gap between unconditional and conditional generation.</li>
+<li>Representation learning without contrastive loss: disjoint latent zones prevent collapse by design (no memory banks or architectural tricks), outperforming MoCo by 9.3% and SimCLR by 0.2% on ImageNet linear classification.</li>
+<li>Joint generation + classification beats training either task alone — conditional FID improves to 2.40 and classification reaches 94.5% on CIFAR10 — direct evidence that tasks can help each other through a shared latent space.</li>
+<li>Orthogonal to AR transformers and diffusion models rather than competing: any generative model can serve as an LZN decoder.</li>
+</ul>
+<h2 class="paper-h">Abstract</h2>
+<p class="paper-abstract">Generative modeling, representation learning, and classification are three core problems in machine learning (ML), yet their state-of-the-art (SoTA) solutions remain largely disjoint. In this paper, we ask: Can a unified principle address all three? Such unification could simplify ML pipelines and foster greater synergy across tasks. We introduce Latent Zoning Network (LZN) as a step toward this goal. At its core, LZN creates a shared Gaussian latent space that encodes information across all tasks. Each data type (e.g., images, text, labels) is equipped with an encoder that maps samples to disjoint latent zones, and a decoder that maps latents back to data. ML tasks are expressed as compositions of these encoders and decoders: for example, label-conditional image generation uses a label encoder and image decoder; image embedding uses an image encoder; classification uses an image encoder and label decoder. We demonstrate the promise of LZN in three increasingly complex scenarios: (1) LZN can enhance existing models (image generation): When combined with the SoTA Rectified Flow model, LZN improves FID on CIFAR10 from 2.76 to 2.59 without modifying the training objective. (2) LZN can solve tasks independently (representation learning): LZN can implement unsupervised representation learning without auxiliary loss functions, outperforming the seminal MoCo and SimCLR methods by 9.3% and 0.2%, respectively, on downstream linear classification on ImageNet. (3) LZN can solve multiple tasks simultaneously (joint generation and classification): With image and label encoders/decoders, LZN performs both tasks jointly by design, improving FID and achieving SoTA classification accuracy on CIFAR10.</p>
+<h2 class="paper-h">BibTeX</h2>
+<pre class="bibtex">@inproceedings{zhu_lzn,
+  title     = {Latent Zoning Network: A Unified Principle for Generative Modeling, Representation Learning, and Classification},
+  author    = {Lin, Zinan and Liu, Enshu and Ning, Xuefei and Zhu, Junyi and Wang, Wenyu and Yekhanin, Sergey},
+  year      = {2025},
+  booktitle = {Conference on Neural Information Processing Systems},
+  url       = {https://arxiv.org/abs/2509.15591},
+}</pre>
+</article>
+</main>
+
+<script>document.querySelectorAll('.js-email').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();location.href='mailto:'+a.dataset.u+'@'+a.dataset.d;});});</script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Surrogate Model Extension (SME): A Fast and Accurate Weight Update Attack on Federated Learning (ICML 2023) — Junyi Zhu</title>
+<meta name="description" content="In real federated learning, clients share weight updates accumulated over many local steps — not per-step gradients — which was presumed to blunt gradient-inversion attacks.">
+<link rel="canonical" href="https://junyizhu-ai.github.io/publications/sme/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23141414'/%3E%3Ctext x='32' y='43' font-family='Helvetica,Arial,sans-serif' font-size='28' font-weight='700' fill='%23fff' text-anchor='middle'%3EJZ%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Surrogate Model Extension (SME): A Fast and Accurate Weight Update Attack on Federated Learning (ICML 2023) — Junyi Zhu">
+<meta property="og:description" content="In real federated learning, clients share weight updates accumulated over many local steps — not per-step gradients — which was presumed to blunt gradient-inversion attacks.">
+<meta property="og:url" content="https://junyizhu-ai.github.io/publications/sme/">
+<meta property="og:image" content="https://junyizhu-ai.github.io/assets/img/pub/sme.jpg">
+<meta name="twitter:card" content="summary">
+<meta name="citation_title" content="Surrogate Model Extension (SME): A Fast and Accurate Weight Update Attack on Federated Learning">
+<meta name="citation_author" content="Junyi Zhu">
+<meta name="citation_author" content="Ruicong Yao">
+<meta name="citation_author" content="Matthew B. Blaschko">
+<meta name="citation_publication_date" content="2023">
+<meta name="citation_arxiv_id" content="2306.00127">
+<meta name="citation_pdf_url" content="https://arxiv.org/pdf/2306.00127">
+<meta name="citation_doi" content="10.48550/arXiv.2306.00127">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/main.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ScholarlyArticle","headline":"Surrogate Model Extension (SME): A Fast and Accurate Weight Update Attack on Federated Learning","name":"Surrogate Model Extension (SME): A Fast and Accurate Weight Update Attack on Federated Learning","author":[{"@type":"Person","name":"Junyi Zhu","url":"https://junyizhu-ai.github.io","sameAs":["https://scholar.google.com/citations?user=3LeC4cMAAAAJ","https://www.linkedin.com/in/junyi-zhu-ai/"]},{"@type":"Person","name":"Ruicong Yao"},{"@type":"Person","name":"Matthew B. Blaschko"}],"datePublished":"2023","publisher":{"@type":"Organization","name":"International Conference of Machine Learning"},"abstract":"In Federated Learning (FL) and many other distributed training frameworks, collaborators can hold their private data locally and only share the network weights trained with the local data after multiple iterations. Gradient inversion is a family of privacy attacks that recovers data from its generated gradients. Seemingly, FL can provide a degree of protection against gradient inversion attacks on weight updates, since the gradient of a single step is concealed by the accumulation of gradients over multiple local iterations. In this work, we propose a principled way to extend gradient inversion attacks to weight updates in FL, thereby better exposing weaknesses in the presumed privacy protection inherent in FL. In particular, we propose a surrogate model method based on the characteristic of two-dimensional gradient flow and low-rank property of local updates. Our method largely boosts the ability of gradient inversion attacks on weight updates containing many iterations and achieves state-of-the-art (SOTA) performance. Additionally, our method runs up to 100x faster than the SOTA baseline in the common FL scenario. Our work re-evaluates and highlights the privacy risk of sharing network weights.","url":"https://junyizhu-ai.github.io/publications/sme/","mainEntityOfPage":"https://junyizhu-ai.github.io/publications/sme/","sameAs":["https://arxiv.org/abs/2306.00127","https://proceedings.mlr.press/v202/zhu23m.html","https://doi.org/10.48550/arXiv.2306.00127"],"identifier":[{"@type":"PropertyValue","propertyID":"arXiv","value":"2306.00127"},{"@type":"PropertyValue","propertyID":"DOI","value":"10.48550/arXiv.2306.00127"}],"image":"https://junyizhu-ai.github.io/assets/img/pub/sme.jpg"}</script>
+</head>
+<body>
+<header class="top"><div class="top-inner">
+<a class="top-name" href="../../">Junyi Zhu</a>
+<nav class="top-nav">
+<a href="../../publications/" style="color:var(--ink);font-weight:700">Publications</a>
+<a href="https://scholar.google.com/citations?user=3LeC4cMAAAAJ">Google Scholar</a>
+<a href="#contact" class="js-email accent" data-u="junyizhu.ai" data-d="gmail.com" rel="nofollow">Email</a>
+</nav>
+</div></header>
+<main class="page">
+<a class="back-link" href="../">← All publications</a>
+<article>
+<h1 class="paper-title">Surrogate Model Extension (SME): A Fast and Accurate Weight Update Attack on Federated Learning</h1>
+<p class="paper-authors"><strong>Junyi Zhu</strong>, Ruicong Yao, Matthew B. Blaschko</p>
+<p class="paper-venue"><span class="venue">ICML 2023</span><span style="margin-left:8px">International Conference of Machine Learning</span></p>
+<div class="paper-links"><a class="btn" href="https://arxiv.org/abs/2306.00127">arXiv</a>
+<a class="btn" href="https://proceedings.mlr.press/v202/zhu23m.html">Publisher page</a>
+<a class="btn" href="https://github.com/JunyiZhu-AI/surrogate_model_extension">Code</a></div>
+<img class="paper-fig" src="../../assets/img/pub/fig/sme.jpg" alt="Key figure from the paper" loading="lazy">
+<h2 class="paper-h">In brief</h2>
+<p class="paper-summary">In real federated learning, clients share weight updates accumulated over many local steps — not per-step gradients — which was presumed to blunt gradient-inversion attacks. SME breaks that assumption with one elegant trick: search for a surrogate model on the line segment between the received and returned weights whose gradient aligns with the weight update, justified by the two-dimensional character of gradient flow and the low-rank structure of local updates. The result is state-of-the-art reconstruction of private data at up to 100x less compute than the prior best attack.</p>
+<h2 class="paper-h">Key takeaways</h2>
+<ul class="paper-takeaways">
+<li>Plain gradient inversion on multi-step weight updates suffers a quantifiable &quot;intrinsic objective error&quot; that grows with the number of local steps — the reason FedAvg seemed safer than per-step sharing.</li>
+<li>Prior simulation attacks (e.g. DLFA) sidestep that error by mimicking every local training step, but need long chains of second-order derivatives — computationally prohibitive at realistic scale.</li>
+<li>SME adds a single scalar to the attack: the surrogate model is a convex combination of the weights before and after local training, chosen so its gradient aligns with the reversed weight update — justified by 2D gradient-flow analysis and the observed low-rank subspace of local steps.</li>
+<li>Any gradient-inversion method can then be applied through the surrogate, at negligible extra cost — achieving state-of-the-art reconstruction while running up to 100x faster than the simulation-based SOTA.</li>
+<li>The practical message for FL deployments: sharing multi-epoch weight updates is not a meaningful privacy defense on its own.</li>
+</ul>
+<h2 class="paper-h">Abstract</h2>
+<p class="paper-abstract">In Federated Learning (FL) and many other distributed training frameworks, collaborators can hold their private data locally and only share the network weights trained with the local data after multiple iterations. Gradient inversion is a family of privacy attacks that recovers data from its generated gradients. Seemingly, FL can provide a degree of protection against gradient inversion attacks on weight updates, since the gradient of a single step is concealed by the accumulation of gradients over multiple local iterations. In this work, we propose a principled way to extend gradient inversion attacks to weight updates in FL, thereby better exposing weaknesses in the presumed privacy protection inherent in FL. In particular, we propose a surrogate model method based on the characteristic of two-dimensional gradient flow and low-rank property of local updates. Our method largely boosts the ability of gradient inversion attacks on weight updates containing many iterations and achieves state-of-the-art (SOTA) performance. Additionally, our method runs up to 100x faster than the SOTA baseline in the common FL scenario. Our work re-evaluates and highlights the privacy risk of sharing network weights.</p>
+<h2 class="paper-h">BibTeX</h2>
+<pre class="bibtex">@inproceedings{zhu_sme,
+  title     = {Surrogate Model Extension (SME): A Fast and Accurate Weight Update Attack on Federated Learning},
+  author    = {Zhu, Junyi and Yao, Ruicong and Blaschko, Matthew B.},
+  year      = {2023},
+  booktitle = {International Conference of Machine Learning},
+  url       = {https://arxiv.org/abs/2306.00127},
+}</pre>
+</article>
+</main>
+
+<script>document.querySelectorAll('.js-email').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();location.href='mailto:'+a.dataset.u+'@'+a.dataset.d;});});</script>
+</body>
+</html>
