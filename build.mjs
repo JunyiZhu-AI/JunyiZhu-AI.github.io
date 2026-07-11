@@ -110,6 +110,9 @@ const FONTS = `<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">`;
 
+// Cloudflare Web Analytics — data is only visible in the owner's Cloudflare dashboard.
+const ANALYTICS = `<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "1bd5bd56d1134e6e8b20307f6f4d03bc"}'></script>`;
+
 function head({ title, desc, path, rel, jsonld, image, type = 'website', extra = '' }) {
   const canonical = SITE + '/' + path;
   const img = SITE + '/' + (image || 'assets/img/profile.jpg');
@@ -131,6 +134,7 @@ function head({ title, desc, path, rel, jsonld, image, type = 'website', extra =
 ${extra}${FONTS}
 <link rel="stylesheet" href="${rel}assets/css/main.css">
 ${jsonld ? `<script type="application/ld+json">${JSON.stringify(jsonld)}</script>` : ''}
+${ANALYTICS}
 </head>`;
 }
 
