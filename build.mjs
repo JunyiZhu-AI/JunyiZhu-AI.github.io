@@ -309,6 +309,18 @@ ${EMAIL_JS}
 </html>`;
 }
 
+// Brace-protect tokens whose capitalization BibTeX styles must not alter
+// (acronyms like SGD, camel-case names like FastMem, hyphenated caps like R-GAP).
+// Plain Initial-cap words are left for the style to sentence-case as usual.
+export function protectCaps(title) {
+  return title.split(' ').map((w) => {
+    const m = w.match(/^([({\["']*)(.+?)([)}\].,:;!?"']*)$/);
+    if (!m) return w;
+    const [, pre, core, post] = m;
+    return /[A-Z]/.test(core.slice(1)) ? `${pre}{${core}}${post}` : w;
+  }).join(' ');
+}
+
 export function bibtexFor(p) {
   const f = p.fields;
   const authors = parseAuthors(f.author).map((a) => `${a.last}, ${a.first}`).join(' and ');
@@ -316,13 +328,13 @@ export function bibtexFor(p) {
   const isPreprint = /^arxiv$/i.test(f.abbr || '');
   const type = isJournal ? 'article' : isPreprint ? 'misc' : 'inproceedings';
   const lines = [`@${type}{zhu_${p.key},`,
-    `  title     = {${f.title}},`,
+    `  title     = {${protectCaps(f.title)}},`,
     `  author    = {${authors}},`,
     `  year      = {${f.year}},`];
   if (isJournal) lines.push(`  journal   = {${f.publisher}},`);
   else if (isPreprint) lines.push(`  eprint    = {${f.arxiv || ''}},`, `  archivePrefix = {arXiv},`);
   else lines.push(`  booktitle = {${f.publisher}},`);
-  if (f.arxiv && !isPreprint) lines.push(`  url       = {https://arxiv.org/abs/${f.arxiv}},`);
+  if (f.arxiv) lines.push(`  url       = {https://arxiv.org/abs/${f.arxiv}},`);
   lines.push('}');
   return lines.join('\n');
 }

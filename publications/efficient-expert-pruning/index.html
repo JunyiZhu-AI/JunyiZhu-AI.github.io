@@ -66,11 +66,12 @@
 <p class="paper-abstract">The rapid advancement of large language models (LLMs) has led to architectures with billions to trillions of parameters, posing significant deployment challenges due to their substantial demands on memory, processing power, and energy consumption. Sparse Mixture-of-Experts (SMoE) architectures have emerged as a solution, activating only a subset of parameters per token, thereby achieving faster inference while maintaining performance. However, SMoE models still face limitations in broader deployment due to their large parameter counts and significant GPU memory requirements. In this work, we introduce a gradient-free evolutionary strategy named EEP (Efficient Expert Pruning) to enhance the pruning of experts in SMoE models. EEP relies solely on model inference (i.e., no gradient computation) and achieves greater sparsity while maintaining or even improving performance on downstream tasks. EEP can be used to reduce both the total number of experts (thus saving GPU memory) and the number of active experts (thus accelerating inference). For example, we demonstrate that pruning up to 75% of experts in Mixtral 8x7B-Instruct results in a substantial reduction in parameters with minimal performance loss. Remarkably, we observe improved performance on certain tasks, such as a significant increase in accuracy on the SQuAD dataset (from 53.4% to 75.4%), when pruning half of the experts. With these results, EEP not only lowers the barrier to deploying SMoE models, but also challenges the conventional understanding of model pruning by showing that fewer experts can lead to better task-specific performance without any fine-tuning.</p>
 <h2 class="paper-h">BibTeX</h2>
 <pre class="bibtex">@misc{zhu_eep,
-  title     = {Efficient Expert Pruning for Sparse Mixture-of-Experts Language Models: Enhancing Performance and Reducing Inference Costs},
+  title     = {Efficient Expert Pruning for Sparse {Mixture-of-Experts} Language Models: Enhancing Performance and Reducing Inference Costs},
   author    = {Liu, Enshu and Zhu, Junyi and Lin, Zinan and Ning, Xuefei and Blaschko, Matthew B. and Yan, Shengen and Dai, Guohao and Yang, Huazhong and Wang, Yu},
   year      = {2024},
   eprint    = {2407.00945},
   archivePrefix = {arXiv},
+  url       = {https://arxiv.org/abs/2407.00945},
 }</pre>
 </article>
 </main>
