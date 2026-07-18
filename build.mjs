@@ -148,6 +148,7 @@ function topBar(rel, active) {
 <nav class="top-nav">
 <a href="${rel}publications/"${active === 'pubs' ? ' style="color:var(--ink);font-weight:700"' : ''}>Publications</a>
 <a href="${SCHOLAR}">Google Scholar</a>
+<a href="${LINKEDIN}">LinkedIn</a>
 ${emailLink('accent')}
 </nav>
 </div></header>`;
