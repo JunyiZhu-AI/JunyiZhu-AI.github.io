@@ -1,6 +1,6 @@
 # Junyi Zhu
 
-> Junyi Zhu is an AI researcher and Senior Applied Scientist at Microsoft, where he drives post-training for Microsoft 365 Copilot — post-training OpenAI models to synergize with Microsoft's tools, applications, and ecosystem, with a focus on enterprise and workplace scenarios. His research spans post-training of LLMs, generative models, federated learning, and privacy-preserving machine learning, with publications at NeurIPS, ICLR, CVPR, ICML, and EMNLP. He holds a PhD from KU Leuven (advised by Prof. Matthew Blaschko) and a Master's degree from the Karlsruhe Institute of Technology, and previously worked at Samsung Research.
+> Junyi Zhu is an AI researcher and Senior Applied Scientist at Microsoft, where he drives post-training for Microsoft Copilot — post-training OpenAI models to synergize with Microsoft's tools, applications, and ecosystem, with a focus on enterprise and workplace scenarios. His research spans post-training of LLMs, generative models, federated learning, and privacy-preserving machine learning, with publications at NeurIPS, ICLR, CVPR, ICML, and EMNLP. He holds a PhD from KU Leuven (advised by Prof. Matthew Blaschko) and a Master's degree from the Karlsruhe Institute of Technology, and previously worked at Samsung Research.
 
 Contact: via the email link on the homepage. Profiles: [Google Scholar](https://scholar.google.com/citations?user=3LeC4cMAAAAJ), [LinkedIn](https://www.linkedin.com/in/junyi-zhu-ai/).
 

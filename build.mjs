@@ -237,7 +237,7 @@ function renderIndex(bio, news, papers) {
       { '@type': 'CollegeOrUniversity', name: 'KU Leuven', url: 'https://www.kuleuven.be' },
       { '@type': 'CollegeOrUniversity', name: 'Karlsruhe Institute of Technology', url: 'https://www.kit.edu' },
     ],
-    knowsAbout: ['post-training of large language models', 'large language models', 'Microsoft 365 Copilot', 'federated learning', 'generative models', 'privacy-preserving machine learning'],
+    knowsAbout: ['post-training of large language models', 'large language models', 'Microsoft Copilot', 'federated learning', 'generative models', 'privacy-preserving machine learning'],
     sameAs: [SCHOLAR, LINKEDIN],
   }, {
     '@context': 'https://schema.org',
@@ -246,8 +246,8 @@ function renderIndex(bio, news, papers) {
     url: SITE,
   }];
   return `${head({
-    title: 'Junyi Zhu — AI Researcher · Post-training for Microsoft 365 Copilot',
-    desc: 'Junyi Zhu is a Senior Applied Scientist at Microsoft, driving post-training for Microsoft 365 Copilot.',
+    title: 'Junyi Zhu — AI Researcher · Post-training for Microsoft Copilot',
+    desc: 'Junyi Zhu is a Senior Applied Scientist at Microsoft, driving post-training for Microsoft Copilot.',
     path: '', rel: '', jsonld,
   })}
 <body>
@@ -423,7 +423,7 @@ function llmsTxt(papers) {
     const brief = f.summary ? ' — ' + f.summary.split(/(?<=\.)\s/)[0] : '';
     return `  - [${f.title} (${f.abbr} ${f.year})](${SITE}/publications/${f.slug}/)${brief}`;
   }).join('\n');
-  return `# Junyi Zhu\n\n> Junyi Zhu is an AI researcher and Senior Applied Scientist at Microsoft, where he drives post-training for Microsoft 365 Copilot — post-training OpenAI models to synergize with Microsoft's tools, applications, and ecosystem, with a focus on enterprise and workplace scenarios. His research spans post-training of LLMs, generative models, federated learning, and privacy-preserving machine learning, with publications at NeurIPS, ICLR, CVPR, ICML, and EMNLP. He holds a PhD from KU Leuven (advised by Prof. Matthew Blaschko) and a Master's degree from the Karlsruhe Institute of Technology, and previously worked at Samsung Research.\n\nContact: via the email link on the homepage. Profiles: [Google Scholar](${SCHOLAR}), [LinkedIn](${LINKEDIN}).\n\n## Site structure\n\n- [Home](${SITE}/): bio, news, selected publications\n- [Publications](${SITE}/publications/): full publication list, generated from BibTeX\n- Individual paper pages, linked from titles in the publications list (each has the abstract, a plain-language summary, key takeaways, BibTeX, and links to arXiv/code):\n${pages}\n`;
+  return `# Junyi Zhu\n\n> Junyi Zhu is an AI researcher and Senior Applied Scientist at Microsoft, where he drives post-training for Microsoft Copilot — post-training OpenAI models to synergize with Microsoft's tools, applications, and ecosystem, with a focus on enterprise and workplace scenarios. His research spans post-training of LLMs, generative models, federated learning, and privacy-preserving machine learning, with publications at NeurIPS, ICLR, CVPR, ICML, and EMNLP. He holds a PhD from KU Leuven (advised by Prof. Matthew Blaschko) and a Master's degree from the Karlsruhe Institute of Technology, and previously worked at Samsung Research.\n\nContact: via the email link on the homepage. Profiles: [Google Scholar](${SCHOLAR}), [LinkedIn](${LINKEDIN}).\n\n## Site structure\n\n- [Home](${SITE}/): bio, news, selected publications\n- [Publications](${SITE}/publications/): full publication list, generated from BibTeX\n- Individual paper pages, linked from titles in the publications list (each has the abstract, a plain-language summary, key takeaways, BibTeX, and links to arXiv/code):\n${pages}\n`;
 }
 
 // Meta-refresh stubs for URLs that existed on the old (al-folio) site.
