@@ -61,7 +61,7 @@
 <h2 class="paper-h">Abstract</h2>
 <p class="paper-abstract">Named Entity Recognition (NER) is a key component in industrial information extraction pipelines, where systems must satisfy strict latency and throughput constraints in addition to strong accuracy. State-of-the-art NER accuracy is often achieved by span-based frameworks, which construct span representations from token encodings and classify candidate spans. However, many span-based methods enumerate large numbers of candidates and process each candidate with marker-augmented inputs, substantially increasing inference cost and limiting scalability in large-scale deployments. In this work, we propose SpanDec, an efficient span-based NER framework that targets this bottleneck. Our main insight is that span representation interactions can be computed effectively at the final transformer stage, avoiding redundant computation in earlier layers via a lightweight decoder dedicated to span representations. We further introduce a span filtering mechanism during enumeration to prune unlikely candidates before expensive processing. Across multiple benchmarks, SpanDec matches competitive span-based baselines while improving throughput and reducing computational cost, yielding a better accuracy-efficiency trade-off suitable for high-volume serving and on-device applications.</p>
 <h2 class="paper-h">BibTeX</h2>
-<pre class="bibtex">@inproceedings{zhu_spandec,
+<pre class="bibtex">@inproceedings{spandec,
   title     = {Decoding Text Spans for Efficient and Accurate {Named-Entity} Recognition},
   author    = {Maracani, Andrea and Ozkan, Savas and Zhu, Junyi and Mutlu, Sinan and Ozay, Mete},
   year      = {2026},

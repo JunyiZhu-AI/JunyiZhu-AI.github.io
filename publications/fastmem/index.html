@@ -66,7 +66,7 @@
 <h2 class="paper-h">Abstract</h2>
 <p class="paper-abstract">Large language models (LLMs) excel in generating coherent text, but they often struggle with context awareness, leading to inaccuracies in tasks requiring faithful adherence to provided information. We introduce FastMem, a novel method designed to enhance instruction fine-tuned LLMs' context awareness through fast memorization of the prompt. FastMem maximizes the likelihood of the prompt before inference by updating only the last Feed-Forward Network (FFN) module. This targeted approach ensures efficient optimization without overfitting, significantly improving the model's ability to comprehend and accurately follow the context. Our experiments demonstrate substantial gains in reading comprehension, text summarization and adherence to output structures. For instance, FastMem improves the accuracy of Llama 3-8B-Inst on the NQ-SWAP dataset from 59.1% to 71.6%, and reduces the output structure failure rate of Qwen 1.5-4B-Chat from 34.9% to 25.5%. Extensive experimental results highlight FastMem's potential to offer a robust solution to enhance the reliability and accuracy of LLMs in various applications.</p>
 <h2 class="paper-h">BibTeX</h2>
-<pre class="bibtex">@inproceedings{zhu_fastmem,
+<pre class="bibtex">@inproceedings{fastmem,
   title     = {{FastMem}: Fast Memorization of Prompt Improves Context Awareness of Large Language Models},
   author    = {Zhu, Junyi and Liu, Shuochen and Yu, Yu and Tang, Bo and Yan, Yibo and Li, Zhiyu and Xiong, Feiyu and Xu, Tong and Blaschko, Matthew B.},
   year      = {2024},

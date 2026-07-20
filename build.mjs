@@ -328,7 +328,7 @@ export function bibtexFor(p) {
   const isJournal = /TMLR/i.test(f.abbr || '');
   const isPreprint = /^arxiv$/i.test(f.abbr || '');
   const type = isJournal ? 'article' : isPreprint ? 'misc' : 'inproceedings';
-  const lines = [`@${type}{zhu_${p.key},`,
+  const lines = [`@${type}{${p.key},`,
     `  title     = {${protectCaps(f.title)}},`,
     `  author    = {${authors}},`,
     `  year      = {${f.year}},`];
