@@ -1,6 +1,4 @@
 # One item per entry. date: YYYY-MM-DD, text: single line (HTML links allowed).
-- date: 2026-08-08
-  text: Our KDD 2026 paper <a href="/publications/gratag/">GraTAG: Production AI Search via Graph-Based Query Decomposition and Triplet Aligned Generation with Rich Multimodal Representations</a> is now published in the proceedings (<a href="https://doi.org/10.1145/3770855.3818426">open access</a>), with the full-stack system code <a href="https://github.com/tangbotony/GraTAG">publicly released</a>.
 - date: 2026-05-17
   text: Our paper <a href="/publications/gratag/">GraTAG: Production AI Search via Graph-Based Query Decomposition and Triplet Aligned Generation with Rich Multimodal Representations</a> has been accepted to the KDD 2026 Applied Data Science (ADS) Track.
 - date: 2026-04-04
