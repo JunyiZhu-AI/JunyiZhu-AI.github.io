@@ -334,8 +334,11 @@ export function bibtexFor(p) {
     `  year      = {${f.year}},`];
   if (isJournal) lines.push(`  journal   = {${f.publisher}},`);
   else if (isPreprint) lines.push(`  eprint    = {${f.arxiv || ''}},`, `  archivePrefix = {arXiv},`);
-  else lines.push(`  booktitle = {${f.publisher}},`);
+  else lines.push(`  booktitle = {${f.booktitle || f.publisher}},`);
+  if (f.pages) lines.push(`  pages     = {${f.pages}},`);
+  if (f.doi) lines.push(`  doi       = {${f.doi}},`);
   if (f.arxiv) lines.push(`  url       = {https://arxiv.org/abs/${f.arxiv}},`);
+  else if (f.doi) lines.push(`  url       = {https://doi.org/${f.doi}},`);
   lines.push('}');
   return lines.join('\n');
 }
@@ -346,18 +349,27 @@ function renderPaper(p) {
   const rel = '../../';
   const thumb = f.preview ? `assets/img/pub/${f.preview.replace(/\.\w+$/, '.jpg')}` : '';
   const arxivUrl = f.arxiv ? `https://arxiv.org/abs/${f.arxiv}` : '';
-  const doi = f.arxiv ? `10.48550/arXiv.${f.arxiv}` : '';
+  const doi = f.doi || (f.arxiv ? `10.48550/arXiv.${f.arxiv}` : '');
+  const pdfUrl = f.pdf || (f.arxiv ? `https://arxiv.org/pdf/${f.arxiv}` : '');
+  const isJournal = /TMLR/i.test(f.abbr || '');
+  const isPreprint = /^arxiv$/i.test(f.abbr || '');
+  const [firstPage, lastPage] = (f.pages || '').split('--');
   const citationMeta = [
     `<meta name="citation_title" content="${esc(f.title)}">`,
     ...parseAuthors(f.author).map((a) => `<meta name="citation_author" content="${esc(a.first + ' ' + a.last)}">`),
-    `<meta name="citation_publication_date" content="${esc(f.year)}">`,
+    `<meta name="citation_publication_date" content="${esc(f.date ? f.date.replace(/-/g, '/') : f.year)}">`,
+    isJournal ? `<meta name="citation_journal_title" content="${esc(f.publisher)}">` : '',
+    !isJournal && !isPreprint ? `<meta name="citation_conference_title" content="${esc(f.booktitle || f.publisher)}">` : '',
+    firstPage ? `<meta name="citation_firstpage" content="${esc(firstPage)}">` : '',
+    lastPage ? `<meta name="citation_lastpage" content="${esc(lastPage)}">` : '',
     f.arxiv ? `<meta name="citation_arxiv_id" content="${f.arxiv}">` : '',
-    f.arxiv ? `<meta name="citation_pdf_url" content="https://arxiv.org/pdf/${f.arxiv}">` : '',
+    pdfUrl ? `<meta name="citation_pdf_url" content="${esc(pdfUrl)}">` : '',
     doi ? `<meta name="citation_doi" content="${doi}">` : '',
   ].filter(Boolean).join('\n') + '\n';
   const links = [];
   if (arxivUrl) links.push(`<a class="btn" href="${arxivUrl}">arXiv</a>`);
   if (f.html && f.html !== arxivUrl) links.push(`<a class="btn" href="${esc(f.html)}">Publisher page</a>`);
+  if (!arxivUrl && f.pdf) links.push(`<a class="btn" href="${esc(f.pdf)}">PDF</a>`);
   if (f.code) links.push(`<a class="btn" href="${esc(f.code)}">Code</a>`);
   const jsonld = {
     '@context': 'https://schema.org',
@@ -369,16 +381,19 @@ function renderPaper(p) {
       if (a.me) { person.url = SITE; person.sameAs = [SCHOLAR, LINKEDIN]; }
       return person;
     }),
-    datePublished: f.year,
-    publisher: { '@type': 'Organization', name: f.publisher },
+    datePublished: f.date || f.year,
+    publisher: { '@type': 'Organization', name: f.org || f.publisher },
+    isPartOf: isPreprint ? undefined : { '@type': isJournal ? 'Periodical' : 'PublicationVolume', name: f.booktitle || f.publisher },
     abstract: f.abstract || undefined,
     url: SITE + '/' + path,
     mainEntityOfPage: SITE + '/' + path,
-    sameAs: [arxivUrl, f.html, doi ? 'https://doi.org/' + doi : ''].filter(Boolean),
-    identifier: f.arxiv ? [
-      { '@type': 'PropertyValue', propertyID: 'arXiv', value: f.arxiv },
-      { '@type': 'PropertyValue', propertyID: 'DOI', value: doi },
-    ] : undefined,
+    sameAs: [...new Set([arxivUrl, f.html, doi ? 'https://doi.org/' + doi : ''].filter(Boolean))],
+    pageStart: firstPage || undefined,
+    pageEnd: lastPage || undefined,
+    identifier: (f.arxiv || doi) ? [
+      f.arxiv ? { '@type': 'PropertyValue', propertyID: 'arXiv', value: f.arxiv } : null,
+      doi ? { '@type': 'PropertyValue', propertyID: 'DOI', value: doi } : null,
+    ].filter(Boolean) : undefined,
     image: thumb ? SITE + '/' + thumb : undefined,
   };
   return `${head({
@@ -393,9 +408,9 @@ ${topBar(rel, 'pubs')}
 <article>
 <h1 class="paper-title">${esc(f.title)}</h1>
 <p class="paper-authors">${authorsHtml(f.author, { initials: false })}</p>
-<p class="paper-venue">${venueLine(f)}<span style="margin-left:8px">${esc(f.publisher)}</span></p>
+<p class="paper-venue"><span class="venue">${esc(f.abbr || '')} ${esc(f.year)}</span><span style="margin-left:8px">${esc(f.publisher)}</span>${f.note ? `<span class="pub-note">${esc(f.note)}</span>` : ''}</p>
 <div class="paper-links">${links.join('\n')}</div>
-${thumb ? `<img class="paper-fig" src="${rel}assets/img/pub/fig/${f.preview.replace(/\.\w+$/, '.jpg')}" alt="Key figure from the paper" loading="lazy">` : ''}
+${thumb ? `<img class="paper-fig" src="${rel}assets/img/pub/fig/${f.preview.replace(/\.\w+$/, '.jpg')}" alt="${esc(f.figalt || 'Key figure from the paper')}" loading="lazy">` : ''}
 ${f.summary ? `<h2 class="paper-h">In brief</h2>\n<p class="paper-summary">${esc(f.summary)}</p>` : ''}
 ${f.takeaways ? `<h2 class="paper-h">Key takeaways</h2>\n<ul class="paper-takeaways">\n${f.takeaways.split('|').map((t) => `<li>${esc(t.trim())}</li>`).join('\n')}\n</ul>` : ''}
 ${f.abstract ? `<h2 class="paper-h">Abstract</h2>\n<p class="paper-abstract">${esc(f.abstract)}</p>` : ''}
@@ -423,7 +438,7 @@ function llmsTxt(papers) {
     const brief = f.summary ? ' — ' + f.summary.split(/(?<=\.)\s/)[0] : '';
     return `  - [${f.title} (${f.abbr} ${f.year})](${SITE}/publications/${f.slug}/)${brief}`;
   }).join('\n');
-  return `# Junyi Zhu\n\n> Junyi Zhu is an AI researcher and Senior Applied Scientist at Microsoft, where he drives post-training for Microsoft Copilot — post-training OpenAI models to synergize with Microsoft's tools, applications, and ecosystem, with a focus on enterprise and workplace scenarios. His research spans post-training of LLMs, generative models, federated learning, and privacy-preserving machine learning, with publications at NeurIPS, ICLR, CVPR, ICML, and EMNLP. He holds a PhD from KU Leuven (advised by Prof. Matthew Blaschko) and a Master's degree from the Karlsruhe Institute of Technology, and previously worked at Samsung Research.\n\nContact: via the email link on the homepage. Profiles: [Google Scholar](${SCHOLAR}), [LinkedIn](${LINKEDIN}).\n\n## Site structure\n\n- [Home](${SITE}/): bio, news, selected publications\n- [Publications](${SITE}/publications/): full publication list, generated from BibTeX\n- Individual paper pages, linked from titles in the publications list (each has the abstract, a plain-language summary, key takeaways, BibTeX, and links to arXiv/code):\n${pages}\n`;
+  return `# Junyi Zhu\n\n> Junyi Zhu is an AI researcher and Senior Applied Scientist at Microsoft, where he drives post-training for Microsoft Copilot — post-training OpenAI models to synergize with Microsoft's tools, applications, and ecosystem, with a focus on enterprise and workplace scenarios. His research spans post-training of LLMs, generative models, federated learning, and privacy-preserving machine learning, with publications at NeurIPS, ICLR, CVPR, ICML, KDD, and EMNLP. He holds a PhD from KU Leuven (advised by Prof. Matthew Blaschko) and a Master's degree from the Karlsruhe Institute of Technology, and previously worked at Samsung Research.\n\nContact: via the email link on the homepage. Profiles: [Google Scholar](${SCHOLAR}), [LinkedIn](${LINKEDIN}).\n\n## Site structure\n\n- [Home](${SITE}/): bio, news, selected publications\n- [Publications](${SITE}/publications/): full publication list, generated from BibTeX\n- Individual paper pages, linked from titles in the publications list (each has the abstract, a plain-language summary, key takeaways, BibTeX, and links to the paper and code):\n${pages}\n`;
 }
 
 // Meta-refresh stubs for URLs that existed on the old (al-folio) site.
