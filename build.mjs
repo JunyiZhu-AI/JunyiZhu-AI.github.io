@@ -209,7 +209,8 @@ function pubRow(p, rel) {
   const f = p.fields;
   const thumb = f.preview ? `${rel}assets/img/pub/${f.preview.replace(/\.\w+$/, '.jpg')}` : '';
   const href = f.slug ? `${rel}publications/${f.slug}/` : (f.html || '');
-  const ext = f.slug && f.html ? ` <a class="pub-ext" href="${esc(f.html)}">paper ↗</a>` : '';
+  const extHref = f.pdf || f.html;
+  const ext = f.slug && extHref ? ` <a class="pub-ext" href="${esc(extHref)}">paper ↗</a>` : '';
   return `<article class="pub">
 ${thumb ? `<img class="pub-thumb" src="${thumb}" alt="" loading="lazy" width="96" height="64">` : ''}
 <div class="pub-body">
@@ -333,7 +334,11 @@ export function bibtexFor(p) {
     `  author    = {${authors}},`,
     `  year      = {${f.year}},`];
   if (isJournal) lines.push(`  journal   = {${f.publisher}},`);
-  else if (isPreprint) lines.push(`  eprint    = {${f.arxiv || ''}},`, `  archivePrefix = {arXiv},`);
+  else if (isPreprint) {
+    lines.push(`  eprint    = {${f.arxiv || ''}},`, `  archivePrefix = {arXiv},`);
+    if (f.arxivclass) lines.push(`  primaryClass = {${f.arxivclass}},`);
+    if (f.arxiv) lines.push(`  doi       = {10.48550/arXiv.${f.arxiv}},`);
+  }
   else lines.push(`  booktitle = {${f.booktitle || f.publisher}},`);
   if (f.pages) lines.push(`  pages     = {${f.pages}},`);
   if (f.doi) lines.push(`  doi       = {${f.doi}},`);
@@ -371,6 +376,8 @@ function renderPaper(p) {
   if (f.html && f.html !== arxivUrl) links.push(`<a class="btn" href="${esc(f.html)}">Publisher page</a>`);
   if (!arxivUrl && f.pdf) links.push(`<a class="btn" href="${esc(f.pdf)}">PDF</a>`);
   if (f.code) links.push(`<a class="btn" href="${esc(f.code)}">Code</a>`);
+  if (f.dataset) links.push(`<a class="btn" href="${esc(f.dataset)}">Dataset</a>`);
+  if (f.models) links.push(`<a class="btn" href="${esc(f.models)}">Models</a>`);
   const jsonld = {
     '@context': 'https://schema.org',
     '@type': 'ScholarlyArticle',
@@ -408,7 +415,7 @@ ${topBar(rel, 'pubs')}
 <article>
 <h1 class="paper-title">${esc(f.title)}</h1>
 <p class="paper-authors">${authorsHtml(f.author, { initials: false })}</p>
-<p class="paper-venue"><span class="venue">${esc(f.abbr || '')} ${esc(f.year)}</span><span style="margin-left:8px">${esc(f.publisher)}</span>${f.note ? `<span class="pub-note">${esc(f.note)}</span>` : ''}</p>
+<p class="paper-venue"><span class="venue">${esc(f.abbr || '')} ${esc(f.year)}</span>${f.publisher && f.publisher !== f.abbr ? `<span style="margin-left:8px">${esc(f.publisher)}</span>` : ''}${f.note ? `<span class="pub-note">${esc(f.note)}</span>` : ''}</p>
 <div class="paper-links">${links.join('\n')}</div>
 ${thumb ? `<img class="paper-fig" src="${rel}assets/img/pub/fig/${f.preview.replace(/\.\w+$/, '.jpg')}" alt="${esc(f.figalt || 'Key figure from the paper')}" loading="lazy">` : ''}
 ${f.summary ? `<h2 class="paper-h">In brief</h2>\n<p class="paper-summary">${esc(f.summary)}</p>` : ''}

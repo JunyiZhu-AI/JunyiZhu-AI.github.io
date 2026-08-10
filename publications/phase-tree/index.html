@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PHASE-Tree: Modeling Character-State Evolution in Long-Horizon Role-Playing Dialogue (arXiv 2026) — Junyi Zhu</title>
+<meta name="description" content="PHASE-Tree is a four-layer character-state tree so role-playing models speak from who the character is now, not a stale profile — plus a benchmark to prove it.">
+<link rel="canonical" href="https://junyizhu-ai.github.io/publications/phase-tree/">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg?v=2">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PHASE-Tree: Modeling Character-State Evolution in Long-Horizon Role-Playing Dialogue (arXiv 2026) — Junyi Zhu">
+<meta property="og:description" content="PHASE-Tree is a four-layer character-state tree so role-playing models speak from who the character is now, not a stale profile — plus a benchmark to prove it.">
+<meta property="og:url" content="https://junyizhu-ai.github.io/publications/phase-tree/">
+<meta property="og:image" content="https://junyizhu-ai.github.io/assets/img/pub/phasetree.jpg">
+<meta name="twitter:card" content="summary">
+<meta name="citation_title" content="PHASE-Tree: Modeling Character-State Evolution in Long-Horizon Role-Playing Dialogue">
+<meta name="citation_author" content="Bo Tang">
+<meta name="citation_author" content="Jianan Yang">
+<meta name="citation_author" content="Junyi Zhu">
+<meta name="citation_author" content="Yiquan Wu">
+<meta name="citation_author" content="Rui Zhao">
+<meta name="citation_author" content="Zhengyu Yang">
+<meta name="citation_author" content="Yang Zhang">
+<meta name="citation_author" content="Feiyu Xiong">
+<meta name="citation_author" content="Zhiyu Li">
+<meta name="citation_author" content="Jiajun Shen">
+<meta name="citation_publication_date" content="2026/08/07">
+<meta name="citation_arxiv_id" content="2608.06975">
+<meta name="citation_pdf_url" content="https://arxiv.org/pdf/2608.06975">
+<meta name="citation_doi" content="10.48550/arXiv.2608.06975">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/main.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ScholarlyArticle","headline":"PHASE-Tree: Modeling Character-State Evolution in Long-Horizon Role-Playing Dialogue","name":"PHASE-Tree: Modeling Character-State Evolution in Long-Horizon Role-Playing Dialogue","author":[{"@type":"Person","name":"Bo Tang"},{"@type":"Person","name":"Jianan Yang"},{"@type":"Person","name":"Junyi Zhu","url":"https://junyizhu-ai.github.io","sameAs":["https://scholar.google.com/citations?user=3LeC4cMAAAAJ","https://www.linkedin.com/in/junyi-zhu-ai/"]},{"@type":"Person","name":"Yiquan Wu"},{"@type":"Person","name":"Rui Zhao"},{"@type":"Person","name":"Zhengyu Yang"},{"@type":"Person","name":"Yang Zhang"},{"@type":"Person","name":"Feiyu Xiong"},{"@type":"Person","name":"Zhiyu Li"},{"@type":"Person","name":"Jiajun Shen"}],"datePublished":"2026-08-07","publisher":{"@type":"Organization","name":"arXiv"},"abstract":"Long-horizon role-playing demands that characters remain recognizable as they evolve with the narrative. Yet existing work falls short on two fronts: representations are typically static profiles that cannot be updated locally without destabilizing unchanged traits, and benchmarks mainly test persona preservation and memory recall rather than whether a model speaks from a character’s currently evolved state. We address both. PHASE-Tree is a multi-timescale character-state tree with an immutable identity root and mutable persona, session, and moment layers, making each mutable field an addressable target for localized within- and cross-episode updates. It conditions generation through explicit textual provision or implicit parametric adaptation. To measure evolved-state generation, we introduce LongEvoRoleBench, which pairs four long-dialogue corpora for cross-episode evolution with four short-dialogue corpora as within-scene state-tracking checks, under a unified next-utterance protocol. On the long-dialogue core, textual PHASE-Tree ranks first in 11 of 12 dataset–metric cells against internal variants and all 12 cells against external textual baselines, improving character-level, semantic, and embedding scores by 19.7%, 12.4%, and 15.1% respectively. In a blinded 200-response study, human ratings correlate with the GPT-4.1 judge (Pearson r = 0.65); on descriptive n = 10 PT and NR prompt subsets, the Overall difference is +0.20. The long-dialogue Sem advantage persists across LLM judges and generation backbones.","url":"https://junyizhu-ai.github.io/publications/phase-tree/","mainEntityOfPage":"https://junyizhu-ai.github.io/publications/phase-tree/","sameAs":["https://arxiv.org/abs/2608.06975","https://doi.org/10.48550/arXiv.2608.06975"],"identifier":[{"@type":"PropertyValue","propertyID":"arXiv","value":"2608.06975"},{"@type":"PropertyValue","propertyID":"DOI","value":"10.48550/arXiv.2608.06975"}],"image":"https://junyizhu-ai.github.io/assets/img/pub/phasetree.jpg"}</script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "1bd5bd56d1134e6e8b20307f6f4d03bc"}'></script>
+</head>
+<body>
+<header class="top"><div class="top-inner">
+<a class="top-name" href="../../">Junyi Zhu</a>
+<nav class="top-nav">
+<a href="../../publications/" style="color:var(--ink);font-weight:700">Publications</a>
+<a href="https://scholar.google.com/citations?user=3LeC4cMAAAAJ">Google Scholar</a>
+<a href="https://www.linkedin.com/in/junyi-zhu-ai/">LinkedIn</a>
+<a href="#contact" class="js-email accent" data-u="junyizhu.ai" data-d="gmail.com" rel="nofollow">Email</a>
+</nav>
+</div></header>
+<main class="page">
+<a class="back-link" href="../">← All publications</a>
+<article>
+<h1 class="paper-title">PHASE-Tree: Modeling Character-State Evolution in Long-Horizon Role-Playing Dialogue</h1>
+<p class="paper-authors">Bo Tang*, Jianan Yang*, <strong>Junyi Zhu</strong>, Yiquan Wu, Rui Zhao, Zhengyu Yang, Yang Zhang, Feiyu Xiong, Zhiyu Li, Jiajun Shen</p>
+<p class="paper-venue"><span class="venue">arXiv 2026</span><span class="pub-note">* = Co-equal primary authors</span></p>
+<div class="paper-links"><a class="btn" href="https://arxiv.org/abs/2608.06975">arXiv</a>
+<a class="btn" href="https://github.com/MemTensor/PHASE-Tree">Code</a>
+<a class="btn" href="https://huggingface.co/datasets/IAAR-Shanghai/LongEvoRoleBench">Dataset</a>
+<a class="btn" href="https://huggingface.co/IAAR-Shanghai/phase_tree_models">Models</a></div>
+<img class="paper-fig" src="../../assets/img/pub/fig/phasetree.jpg" alt="PHASE-Tree character-state hierarchy: an immutable identity root (name, gender, backstory) branches into persona, session, and moment layers ordered from most stable to most dynamic, with per-field update resistance levels and frozen-versus-updating modes per time scale." loading="lazy">
+<h2 class="paper-h">In brief</h2>
+<p class="paper-summary">PHASE-Tree is a four-layer character-state tree so role-playing models speak from who the character is now, not a stale profile — plus a benchmark to prove it. An immutable identity root (name, gender, append-only backstory) branches into persona, session, and moment layers ordered by how fast they change; each mutable field updates independently, with long-term persona changes gated by resistance, evidence, and cooldown rules. The benchmark, LongEvoRoleBench, turns eight role-playing corpora — from Friends to Harry Potter — into a unified next-utterance test scored against the character's current state. Serialized into the prompt, PHASE-Tree beats every rival prompt-based method on all four long-dialogue corpora across all three metrics, and the code, benchmark, and models are publicly released.</p>
+<h2 class="paper-h">Key takeaways</h2>
+<ul class="paper-takeaways">
+<li>Long-horizon role-playing has a signature breakdown the paper names stale-state failure: a model keeps Chandler Bing's sarcastic voice (Friends) but still treats commitment as a punchline in a marriage scene — it remembers how the character talks while forgetting who they have become.</li>
+<li>PHASE-Tree gates character change the way narratives pace it: core traits like personality evolve only on repeated high-significance evidence spanning 16+ episodes — most of a season — while a relationship can flip from a single decisive scene.</li>
+<li>The LongEvoRoleBench benchmark rebuilds eight role-playing corpora into one predict-the-character's-next-line test — four long-running series (Friends, The Office, Star Trek, Harry Potter) for cross-episode evolution, four short-dialogue sets as controls — scoring each reply against who the character is now, not their frozen starting profile.</li>
+<li>In the prompt-based setting, PHASE-Tree sweeps every long-dialogue comparison against external baselines — improving character, semantic, and embedding scores by 19.7%, 12.4%, and 15.1% over the strongest baseline on each — and still leads the semantic average on the short-dialogue controls.</li>
+<li>Surprise from the ablations: on the long-dialogue core, a structured tree alone scores worse than simply letting an LLM rewrite the raw profile — the gains appear only once the tree also tracks what the character just learned and felt in the current scene, the one addition that improves all three metrics at once.</li>
+<li>The same state can instead be baked into a small LoRA adapter, shrinking a ~1,700-token profile-heavy prompt to dialogue only — but the network that converts profiles into adapters compresses away state detail and trails the prompting route, a limitation the paper leaves open.</li>
+<li>Trust checks: a blinded 200-response human study correlates moderately with the automated GPT-4.1 grader (Pearson r = 0.65), and the long-dialogue semantic advantage holds across grader models and four different base LLMs.</li>
+</ul>
+<h2 class="paper-h">Abstract</h2>
+<p class="paper-abstract">Long-horizon role-playing demands that characters remain recognizable as they evolve with the narrative. Yet existing work falls short on two fronts: representations are typically static profiles that cannot be updated locally without destabilizing unchanged traits, and benchmarks mainly test persona preservation and memory recall rather than whether a model speaks from a character’s currently evolved state. We address both. PHASE-Tree is a multi-timescale character-state tree with an immutable identity root and mutable persona, session, and moment layers, making each mutable field an addressable target for localized within- and cross-episode updates. It conditions generation through explicit textual provision or implicit parametric adaptation. To measure evolved-state generation, we introduce LongEvoRoleBench, which pairs four long-dialogue corpora for cross-episode evolution with four short-dialogue corpora as within-scene state-tracking checks, under a unified next-utterance protocol. On the long-dialogue core, textual PHASE-Tree ranks first in 11 of 12 dataset–metric cells against internal variants and all 12 cells against external textual baselines, improving character-level, semantic, and embedding scores by 19.7%, 12.4%, and 15.1% respectively. In a blinded 200-response study, human ratings correlate with the GPT-4.1 judge (Pearson r = 0.65); on descriptive n = 10 PT and NR prompt subsets, the Overall difference is +0.20. The long-dialogue Sem advantage persists across LLM judges and generation backbones.</p>
+<h2 class="paper-h">BibTeX</h2>
+<pre class="bibtex">@misc{phasetree,
+  title     = {{PHASE-Tree}: Modeling {Character-State} Evolution in {Long-Horizon} {Role-Playing} Dialogue},
+  author    = {Tang, Bo and Yang, Jianan and Zhu, Junyi and Wu, Yiquan and Zhao, Rui and Yang, Zhengyu and Zhang, Yang and Xiong, Feiyu and Li, Zhiyu and Shen, Jiajun},
+  year      = {2026},
+  eprint    = {2608.06975},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.CL},
+  doi       = {10.48550/arXiv.2608.06975},
+  url       = {https://arxiv.org/abs/2608.06975},
+}</pre>
+</article>
+</main>
+
+<script>document.querySelectorAll('.js-email').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();location.href='mailto:'+a.dataset.u+'@'+a.dataset.d;});});</script>
+</body>
+</html>
