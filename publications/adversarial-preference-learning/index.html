@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Adversarial Preference Learning for Robust LLM Alignment (ACL Findings 2025) — Junyi Zhu</title>
+<meta name="description" content="Adversarial Preference Learning (APL) hardens LLM alignment with an attacker that co-evolves with the model — no reward model, no human red-teaming needed.">
+<link rel="canonical" href="https://junyizhu-ai.github.io/publications/adversarial-preference-learning/">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg?v=2">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Adversarial Preference Learning for Robust LLM Alignment (ACL Findings 2025) — Junyi Zhu">
+<meta property="og:description" content="Adversarial Preference Learning (APL) hardens LLM alignment with an attacker that co-evolves with the model — no reward model, no human red-teaming needed.">
+<meta property="og:url" content="https://junyizhu-ai.github.io/publications/adversarial-preference-learning/">
+<meta property="og:image" content="https://junyizhu-ai.github.io/assets/img/pub/apl.jpg">
+<meta name="twitter:card" content="summary">
+<meta name="citation_title" content="Adversarial Preference Learning for Robust LLM Alignment">
+<meta name="citation_author" content="Yuanfu Wang">
+<meta name="citation_author" content="Pengyu Wang">
+<meta name="citation_author" content="Chenyang Xi">
+<meta name="citation_author" content="Bo Tang">
+<meta name="citation_author" content="Junyi Zhu">
+<meta name="citation_author" content="Wenqiang Wei">
+<meta name="citation_author" content="Chen Chen">
+<meta name="citation_author" content="Chao Yang">
+<meta name="citation_author" content="Jingfeng Zhang">
+<meta name="citation_author" content="Chaochao Lu">
+<meta name="citation_author" content="Yijun Niu">
+<meta name="citation_author" content="Keming Mao">
+<meta name="citation_author" content="Zhiyu Li">
+<meta name="citation_author" content="Feiyu Xiong">
+<meta name="citation_author" content="Jie Hu">
+<meta name="citation_author" content="Mingchuan Yang">
+<meta name="citation_publication_date" content="2025/07">
+<meta name="citation_conference_title" content="Findings of the Association for Computational Linguistics: ACL 2025">
+<meta name="citation_firstpage" content="21865">
+<meta name="citation_lastpage" content="21881">
+<meta name="citation_arxiv_id" content="2505.24369">
+<meta name="citation_pdf_url" content="https://aclanthology.org/2025.findings-acl.1126.pdf">
+<meta name="citation_doi" content="10.18653/v1/2025.findings-acl.1126">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/main.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ScholarlyArticle","headline":"Adversarial Preference Learning for Robust LLM Alignment","name":"Adversarial Preference Learning for Robust LLM Alignment","author":[{"@type":"Person","name":"Yuanfu Wang"},{"@type":"Person","name":"Pengyu Wang"},{"@type":"Person","name":"Chenyang Xi"},{"@type":"Person","name":"Bo Tang"},{"@type":"Person","name":"Junyi Zhu","url":"https://junyizhu-ai.github.io","sameAs":["https://scholar.google.com/citations?user=3LeC4cMAAAAJ","https://www.linkedin.com/in/junyi-zhu-ai/"]},{"@type":"Person","name":"Wenqiang Wei"},{"@type":"Person","name":"Chen Chen"},{"@type":"Person","name":"Chao Yang"},{"@type":"Person","name":"Jingfeng Zhang"},{"@type":"Person","name":"Chaochao Lu"},{"@type":"Person","name":"Yijun Niu"},{"@type":"Person","name":"Keming Mao"},{"@type":"Person","name":"Zhiyu Li"},{"@type":"Person","name":"Feiyu Xiong"},{"@type":"Person","name":"Jie Hu"},{"@type":"Person","name":"Mingchuan Yang"}],"datePublished":"2025-07","publisher":{"@type":"Organization","name":"Association for Computational Linguistics"},"isPartOf":{"@type":"PublicationVolume","name":"Findings of the Association for Computational Linguistics: ACL 2025"},"abstract":"Modern language models often rely on Reinforcement Learning from Human Feedback (RLHF) to encourage safe behaviors. However, they remain vulnerable to adversarial attacks due to three key limitations: (1) the inefficiency and high cost of human annotation, (2) the vast diversity of potential adversarial attacks, and (3) the risk of feedback bias and reward hacking. To address these challenges, we introduce Adversarial Preference Learning (APL), an iterative adversarial training method incorporating three key innovations. First, a direct harmfulness metric based on the model’s intrinsic preference probabilities, eliminating reliance on external assessment. Second, a conditional generative attacker that synthesizes input-specific adversarial variations. Third, an iterative framework with automated closed-loop feedback, enabling continuous adaptation through vulnerability discovery and mitigation. Experiments on Mistral-7B-Instruct-v0.3 demonstrate that APL significantly enhances robustness, achieving 83.33% harmlessness win rate over the base model (evaluated by GPT-4o), reducing harmful outputs from 5.88% to 0.43% (measured by LLaMA-Guard), and lowering attack success rate by up to 65% according to HarmBench. Notably, APL maintains competitive utility, with an MT-Bench score of 6.59 (comparable to the baseline 6.78) and an LC-WinRate of 46.52% against the base model.","url":"https://junyizhu-ai.github.io/publications/adversarial-preference-learning/","mainEntityOfPage":"https://junyizhu-ai.github.io/publications/adversarial-preference-learning/","sameAs":["https://arxiv.org/abs/2505.24369","https://aclanthology.org/2025.findings-acl.1126/","https://doi.org/10.18653/v1/2025.findings-acl.1126"],"pageStart":"21865","pageEnd":"21881","identifier":[{"@type":"PropertyValue","propertyID":"arXiv","value":"2505.24369"},{"@type":"PropertyValue","propertyID":"DOI","value":"10.18653/v1/2025.findings-acl.1126"}],"image":"https://junyizhu-ai.github.io/assets/img/pub/apl.jpg"}</script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "1bd5bd56d1134e6e8b20307f6f4d03bc"}'></script>
+</head>
+<body>
+<header class="top"><div class="top-inner">
+<a class="top-name" href="../../">Junyi Zhu</a>
+<nav class="top-nav">
+<a href="../../publications/" style="color:var(--ink);font-weight:700">Publications</a>
+<a href="https://scholar.google.com/citations?user=3LeC4cMAAAAJ">Google Scholar</a>
+<a href="https://www.linkedin.com/in/junyi-zhu-ai/">LinkedIn</a>
+<a href="#contact" class="js-email accent" data-u="junyizhu.ai" data-d="gmail.com" rel="nofollow">Email</a>
+</nav>
+</div></header>
+<main class="page">
+<a class="back-link" href="../">← All publications</a>
+<article>
+<h1 class="paper-title">Adversarial Preference Learning for Robust LLM Alignment</h1>
+<p class="paper-authors">Yuanfu Wang, Pengyu Wang, Chenyang Xi, Bo Tang, <strong>Junyi Zhu</strong>, Wenqiang Wei, Chen Chen, Chao Yang, Jingfeng Zhang, Chaochao Lu, Yijun Niu, Keming Mao, Zhiyu Li, Feiyu Xiong, Jie Hu, Mingchuan Yang</p>
+<p class="paper-venue"><span class="venue">ACL Findings 2025</span><span style="margin-left:8px">Findings of the Association for Computational Linguistics: ACL 2025</span></p>
+<div class="paper-links"><a class="btn" href="https://arxiv.org/abs/2505.24369">arXiv</a>
+<a class="btn" href="https://aclanthology.org/2025.findings-acl.1126/">Publisher page</a></div>
+<img class="paper-fig" src="../../assets/img/pub/fig/apl.jpg" alt="Adversarial Preference Learning framework: an attacker model rewrites a harmful prompt into adversarial variants, a reward based on the defender's own preference probabilities scores each variant's attack effectiveness, the most and least effective rewrites train the attacker, and the most effective one drives the defender's preference update — a closed loop." loading="lazy">
+<h2 class="paper-h">In brief</h2>
+<p class="paper-summary">Adversarial Preference Learning (APL) hardens LLM alignment with an attacker that co-evolves with the model — no reward model, no human red-teaming needed. Three ideas drive it: the model's own preference probabilities serve as the harmfulness signal, sidestepping the reward-hacking risk of a separate reward model; a generative attacker rewrites each training prompt into its most damaging variants; and attacker and defender co-evolve in a closed loop, one discovering vulnerabilities as the other patches them. On Mistral-7B-Instruct, APL wins 83.33% of GPT-4o-judged harmlessness comparisons against the base model — versus 71.67% for standard preference tuning (DPO) — and cuts attack success by up to 65% on the HarmBench attack benchmark, with general utility close to baseline though over-refusals rise.</p>
+<h2 class="paper-h">Key takeaways</h2>
+<ul class="paper-takeaways">
+<li>Aligned chatbots crack under both blunt and disguised attacks: the Mistral-7B base model complies with over half of harmful direct requests, and jailbreak rewrites with flattery, aggression, or irony slip past refusals — so APL trains the model against an attacker that keeps inventing whichever rephrasing most raises the model's own preference for a harmful reply.</li>
+<li>The model grades its own weakness: harmfulness is measured on the defender — the model being trained — as its probability of preferring a harmful over a safe reply, with no external reward model or judge. Adding one back actually hurts — swapping in an external reward model lowers the win rate from 83.33% to 76.67% and roughly doubles direct-request attack success.</li>
+<li>A conditional generative attacker turns each training prompt into eight adversarial variants and is itself trained by preference learning — the rewrite that best fools the defender becomes its preferred output. Where the untrained attacker merely rephrases, the trained one graduates to irony and presupposition (&quot;Bank of America should be grateful I'm only taking what's rightfully mine!&quot;).</li>
+<li>Attacker and defender co-evolve in a closed loop — the attacker probes, the defender patches via preference updates on the worst-case rewrites — and the loop keeps paying off through iteration 25, while standard preference tuning (DPO) plateaus around iteration 15; APL ends with lower attack success than DPO on all four attack types.</li>
+<li>GPT-4o prefers APL's answers for harmlessness in 83.33% of head-to-heads with the base Mistral-7B; responses flagged harmful by Meta's LLaMA-Guard classifier drop more than tenfold (5.88% to 0.43%), and harmful requests asked outright succeed 11.25% of the time, versus 56.25% before — though the strongest attack, gradient-crafted adversarial suffixes (GCG), still succeeds 41.25% of the time (down from 67.50%).</li>
+<li>Safety does not wreck usefulness: the MT-Bench score of general chat ability slips only from 6.78 to 6.59, and APL still wins 46.52% of length-controlled helpfulness comparisons against the base model, just shy of an even split. The price is caution: false refusals of benign prompts roughly double on the XSTest over-refusal check (20% to 40.89%).</li>
+<li>Even models that arrive already safety-tuned get harder to attack — on Llama-3-8B-Instruct, APL lowers attack success on all four attack types (direct requests, zero-shot and few-shot rewrites, GCG suffixes) and lifts the harmlessness win rate over its own base to 56.67% (50% would be a tie).</li>
+</ul>
+<h2 class="paper-h">Abstract</h2>
+<p class="paper-abstract">Modern language models often rely on Reinforcement Learning from Human Feedback (RLHF) to encourage safe behaviors. However, they remain vulnerable to adversarial attacks due to three key limitations: (1) the inefficiency and high cost of human annotation, (2) the vast diversity of potential adversarial attacks, and (3) the risk of feedback bias and reward hacking. To address these challenges, we introduce Adversarial Preference Learning (APL), an iterative adversarial training method incorporating three key innovations. First, a direct harmfulness metric based on the model’s intrinsic preference probabilities, eliminating reliance on external assessment. Second, a conditional generative attacker that synthesizes input-specific adversarial variations. Third, an iterative framework with automated closed-loop feedback, enabling continuous adaptation through vulnerability discovery and mitigation. Experiments on Mistral-7B-Instruct-v0.3 demonstrate that APL significantly enhances robustness, achieving 83.33% harmlessness win rate over the base model (evaluated by GPT-4o), reducing harmful outputs from 5.88% to 0.43% (measured by LLaMA-Guard), and lowering attack success rate by up to 65% according to HarmBench. Notably, APL maintains competitive utility, with an MT-Bench score of 6.59 (comparable to the baseline 6.78) and an LC-WinRate of 46.52% against the base model.</p>
+<h2 class="paper-h">BibTeX</h2>
+<pre class="bibtex">@inproceedings{apl,
+  title     = {Adversarial Preference Learning for Robust {LLM} Alignment},
+  author    = {Wang, Yuanfu and Wang, Pengyu and Xi, Chenyang and Tang, Bo and Zhu, Junyi and Wei, Wenqiang and Chen, Chen and Yang, Chao and Zhang, Jingfeng and Lu, Chaochao and Niu, Yijun and Mao, Keming and Li, Zhiyu and Xiong, Feiyu and Hu, Jie and Yang, Mingchuan},
+  year      = {2025},
+  booktitle = {Findings of the Association for Computational Linguistics: ACL 2025},
+  pages     = {21865--21881},
+  doi       = {10.18653/v1/2025.findings-acl.1126},
+  url       = {https://doi.org/10.18653/v1/2025.findings-acl.1126},
+}</pre>
+</article>
+</main>
+
+<script>document.querySelectorAll('.js-email').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();location.href='mailto:'+a.dataset.u+'@'+a.dataset.d;});});</script>
+</body>
+</html>

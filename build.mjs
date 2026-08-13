@@ -342,8 +342,8 @@ export function bibtexFor(p) {
   else lines.push(`  booktitle = {${f.booktitle || f.publisher}},`);
   if (f.pages) lines.push(`  pages     = {${f.pages}},`);
   if (f.doi) lines.push(`  doi       = {${f.doi}},`);
-  if (f.arxiv) lines.push(`  url       = {https://arxiv.org/abs/${f.arxiv}},`);
-  else if (f.doi) lines.push(`  url       = {https://doi.org/${f.doi}},`);
+  if (f.doi && !isPreprint) lines.push(`  url       = {https://doi.org/${f.doi}},`);
+  else if (f.arxiv) lines.push(`  url       = {https://arxiv.org/abs/${f.arxiv}},`);
   lines.push('}');
   return lines.join('\n');
 }
